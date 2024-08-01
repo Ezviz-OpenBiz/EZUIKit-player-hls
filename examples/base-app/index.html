@@ -52,6 +52,7 @@
         <div style="display: inline-flex">
           <button id="play">播放</button>
           <button id="pause">暂停</button>
+          <button id="fullscreen">全屏</button>
           <button id="destroy">销毁</button>
           <div title="只取小数点后两位，不进位">
             <label>音量：</label>
@@ -72,11 +73,11 @@
       var $init = document.getElementById("init");
       var $play = document.getElementById("play");
       var $pause = document.getElementById("pause");
+      var $fullscreen = document.getElementById("fullscreen");
       var $playHref = document.getElementById("playUrl");
       var $destroy = document.getElementById("destroy");
       var $getVersion = document.getElementById("getVersion");
 
-      var $setDebug = document.getElementById("setDebug");
       var $setVolume = document.getElementById("setVolume");
       var $setRotate = document.getElementById("setRotate");
       var $setScaleMode = document.getElementById("setScaleMode");
@@ -126,6 +127,10 @@
 
       $pause.addEventListener("click", function () {
         if (player) player.pause();
+      });
+      
+      $fullscreen.addEventListener("click", function () {
+        if (player) player.fullscreen();
       });
 
       $destroy.addEventListener("click", function () {
