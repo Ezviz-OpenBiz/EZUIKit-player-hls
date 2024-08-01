@@ -42,5 +42,15 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/Ezviz-OpenBiz/EZUIKit-hls/issues"
+  },
+  "homepage": "https://github.com/Ezviz-OpenBiz/EZUIKit-hls",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ezviz-OpenBiz/EZUIKit-hls.git",
+    "branch": "main",
+    "platform": "github"
   }
 }
