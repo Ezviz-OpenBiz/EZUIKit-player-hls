@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef } from "react";
 import HlsPlayer from "@ezuikit/player-hls";
 
 function Player() {
+  /** @type { React.MutableRefObject<HlsPlayer>} */
   const playerRef = useRef();
   const urlRef = useRef();
   const containerRef = useRef();
@@ -74,9 +75,9 @@ function Player() {
     }
   }, []);
 
-  const handleCancelFullscreen = useCallback(() => {
+  const handleExitFullscreen = useCallback(() => {
     if (playerRef.current) {
-      playerRef.current.cancelFullscreen();
+      playerRef.current.exitFullscreen();
     }
   }, []);
 
@@ -103,7 +104,7 @@ function Player() {
           <button onClick={handlePlay}>播放</button>
           <button onClick={handlePause}>暂停</button>
           <button onClick={handleFullscreen}>开启全屏</button>
-          <button onClick={handleCancelFullscreen}>取消全屏（ESC）</button>
+          <button onClick={handleExitFullscreen}>取消全屏（ESC）</button>
           <button onClick={handleGetVersion}>获取版本</button>
           <button onClick={handleDestroy}>销毁</button>
         </div>
