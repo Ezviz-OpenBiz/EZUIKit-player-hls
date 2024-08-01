@@ -1,5 +1,7 @@
 ## @ezuikit/player-hls
 
+hls 直播播放器， 支持视频H264, H265， 音频 AAC 播放。
+
 ## 安装
 
 ```bash
