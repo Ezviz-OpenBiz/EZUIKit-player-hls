@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@ezuikit/player-hls':
-    specifier: ^0.1.0-alpha.1
-    version: 0.1.0-alpha.1
+    specifier: ^0.1.0-beta.1
+    version: 0.1.0-beta.1
   '@testing-library/jest-dom':
     specifier: ^5.17.0
     version: 5.17.0
@@ -1782,9 +1782,10 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: false
 
-  /@ezuikit/player-base@0.1.0-alpha.1:
-    resolution: {integrity: sha512-68O3PtB5g7hm+HSpCqE/ef/Ud0xUPsFv3ckrj6VKm7wyed+9aqTazxv8mDPOXuNStZZULpfn+7Uf0KW7cHAyxg==}
+  /@ezuikit/player-base@0.1.0:
+    resolution: {integrity: sha512-IcJqnZr9FmjBCnIrmqY7oHdyDuYxRWhDZB+K+gi+4oenFjFV4aLCCG7RFPxkidHzi3TTF2f1Bm5yObZzNDqkfw==}
     dependencies:
+      '@ezuikit/utils-collect': 0.1.0
       '@ezuikit/utils-logger': 1.0.1
       '@ezuikit/utils-tools': 1.0.3
       eventemitter3: 5.0.1
@@ -1793,11 +1794,11 @@ packages:
       ua-parser-js: 1.0.37
     dev: false
 
-  /@ezuikit/player-hls@0.1.0-alpha.1:
-    resolution: {integrity: sha512-DcR5B3JBwY9pT+wRapk5B8ntqYdHkXjj+S0GfS2Ler41+g/l6YaSC/LsWh525bVRbfMGDxhUD9WBK01CoHn1Bw==}
+  /@ezuikit/player-hls@0.1.0-beta.1:
+    resolution: {integrity: sha512-IxepiCKym2sZTnsejGnIt+R5JMadTovAhpDFSbZ4sjFXXnMrRZYTgM9lyIGdjJCaA8LAseA0QmHRRslD/zHjHA==}
     dependencies:
-      '@ezuikit/player-base': 0.1.0-alpha.1
-      '@ezuikit/utils-collect': 0.1.0-beta.1
+      '@ezuikit/player-base': 0.1.0
+      '@ezuikit/utils-collect': 0.1.0
       '@ezuikit/utils-i18n': 1.0.1
       '@ezuikit/utils-logger': 1.0.1
       '@ezuikit/utils-tools': 1.0.3
@@ -1809,8 +1810,8 @@ packages:
       ua-parser-js: 1.0.37
     dev: false
 
-  /@ezuikit/utils-collect@0.1.0-beta.1:
-    resolution: {integrity: sha512-+kkEkOVM9bQkWp90ppFpEwuaG8sRCH/F3CamLLgS0CG18gk1Fb5lcvS21hklgxMjS5tLotjwlfs0j+pQydzRYA==}
+  /@ezuikit/utils-collect@0.1.0:
+    resolution: {integrity: sha512-85lWlB/VCaooPPkCK3nEB4F3UKgO+HbmoPEq4U1tH/ObVP7IJ7eURrFUmQT1CKsqjH5xz5g4DgZzHWgYrwGcCQ==}
     dev: false
 
   /@ezuikit/utils-i18n@1.0.1:

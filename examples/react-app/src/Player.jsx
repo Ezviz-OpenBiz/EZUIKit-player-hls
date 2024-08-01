@@ -1,6 +1,6 @@
 import "./Player.css";
 import { useCallback, useEffect, useRef } from "react";
-import HLSPlayer from "@ezuikit/player-hls";
+import HlsPlayer from "@ezuikit/player-hls";
 
 function Player() {
   const playerRef = useRef();
@@ -9,7 +9,6 @@ function Player() {
   const volumeRef = useRef();
 
   useEffect(() => {
-    // createPlayer();
     volumeRef.current.addEventListener("blur", (e) => {
       if (playerRef.current) {
         let value = (e.target.value || "").trim();
@@ -34,10 +33,9 @@ function Player() {
   const createPlayer = () => {
     const url = urlRef.current.value;
     if (!playerRef.current) {
-      playerRef.current = new HLSPlayer({
-        id: containerRef.current,
+      playerRef.current = new HlsPlayer({
+        id: "player-container",
         url,
-        decoder: "decoder.js" // 软解解码资源 （wasm 要和js 在同一个文件夹中）
       });
       playerRef.current.play();
     }
@@ -70,27 +68,15 @@ function Player() {
     }
   }, []);
 
-  const handleOpenSound = useCallback(() => {
+  const handleFullscreen = useCallback(() => {
     if (playerRef.current) {
-      playerRef.current.openSound();
+      playerRef.current.fullscreen();
     }
   }, []);
 
-  const handleCloseSound = useCallback(() => {
+  const handleCancelFullscreen = useCallback(() => {
     if (playerRef.current) {
-      playerRef.current.closeSound();
-    }
-  }, []);
-
-  const handleFullScreen = useCallback(() => {
-    if (playerRef.current) {
-      playerRef.current.fullScreen();
-    }
-  }, []);
-
-  const handleCancelFullScreen = useCallback(() => {
-    if (playerRef.current) {
-      playerRef.current.cancelFullScreen();
+      playerRef.current.cancelFullscreen();
     }
   }, []);
 
@@ -116,10 +102,8 @@ function Player() {
           <button onClick={handleInIt}>init</button>
           <button onClick={handlePlay}>播放</button>
           <button onClick={handlePause}>暂停</button>
-          <button onClick={handleOpenSound}>打开声音</button>
-          <button onClick={handleCloseSound}>关闭声音</button>
-          <button onClick={handleFullScreen}>开启全屏</button>
-          <button onClick={handleCancelFullScreen}>取消全屏（ESC）</button>
+          <button onClick={handleFullscreen}>开启全屏</button>
+          <button onClick={handleCancelFullscreen}>取消全屏（ESC）</button>
           <button onClick={handleGetVersion}>获取版本</button>
           <button onClick={handleDestroy}>销毁</button>
         </div>
