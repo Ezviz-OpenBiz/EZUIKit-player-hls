@@ -44,12 +44,12 @@
     "registry": "https://registry.npmjs.org/"
   },
   "bugs": {
-    "url": "https://github.com/Ezviz-OpenBiz/EZUIKit-hls/issues"
+    "url": "https://github.com/Ezviz-OpenBiz/EZUIKit-player-hls/issues"
   },
-  "homepage": "https://github.com/Ezviz-OpenBiz/EZUIKit-hls",
+  "homepage": "https://github.com/Ezviz-OpenBiz/EZUIKit-player-hls",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ezviz-OpenBiz/EZUIKit-hls.git",
+    "url": "git+https://github.com/Ezviz-OpenBiz/EZUIKit-player-hls.git",
     "branch": "main",
     "platform": "github"
   }
