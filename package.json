@@ -1,0 +1,46 @@
+{
+  "name": "@ezuikit/player-hls",
+  "version": "0.1.0-beta.1",
+  "description": "hls播放器",
+  "main": "dist/index.js",
+  "umd": "dist/index.umd.js",
+  "types": "dist/types/index.d.ts",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "dev": "npm run clean && cross-env NODE_ENV=development rollup --config rollup.config.js --bundleConfigAsCjs --watch",
+    "build": "npm run clean && cross-env NODE_ENV=production rollup --config rollup.config.js --bundleConfigAsCjs",
+    "test": "jest",
+    "prebuild": "npm run clean",
+    "clean": "rimraf docs dist coverage",
+    "docs": "typedoc --tsconfig typedoc.config.js --exclude **/*.js"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.js.map"
+  ],
+  "keywords": [
+    "hls",
+    "h265",
+    "live",
+    "player"
+  ],
+  "author": "Ezviz-OpenBiz",
+  "dependencies": {
+    "@ezuikit/utils-i18n": "^1.0.1",
+    "@ezuikit/utils-logger": "^1.0.1",
+    "@ezuikit/utils-tools": "^1.0.2",
+    "dayjs": "^1.11.10",
+    "eventemitter3": "^5.0.1",
+    "hls.js": "^1.5.7",
+    "lodash-es": "^4.17.21",
+    "screenfull": "^6.0.2",
+    "ua-parser-js": "1.0.37",
+    "@ezuikit/player-base": "0.1.0",
+    "@ezuikit/utils-collect": "^0.1.0"
+  },
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
