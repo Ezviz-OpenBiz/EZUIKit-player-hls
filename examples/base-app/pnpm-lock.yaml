@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@ezuikit/player-hls':
-    specifier: ^0.1.0-beta.2
-    version: 0.1.0-beta.2
+    specifier: ^0.1.0
+    version: 0.1.0
 
 devDependencies:
   http-server:
@@ -28,8 +28,8 @@ packages:
       ua-parser-js: 1.0.37
     dev: false
 
-  /@ezuikit/player-hls@0.1.0-beta.2:
-    resolution: {integrity: sha512-iYe9Hft4dwxndrFwJCe8OlkM7Ir3gpox1oJe633R/tEmKfXxOino6Pbo3xgyIa8YmXBEQnuDeXg5+Hb2h8KVoQ==}
+  /@ezuikit/player-hls@0.1.0:
+    resolution: {integrity: sha512-T5PCj65mw3mP1MpfJOrx/MXpNZFMrW37fjjYnil1rCuy6ACGBNWXFVvOlzuh5k7G4DFV+HjbbMJnG21icNdZnw==}
     dependencies:
       '@ezuikit/player-base': 0.1.0
       '@ezuikit/utils-collect': 0.1.0
