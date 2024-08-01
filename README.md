@@ -24,13 +24,13 @@ pnpm add @ezuikit/player-hls
 
 ```ts
 // 推荐
-import HLSPlayer from '@ezuikit/player-hls';
+import HlsPlayer from '@ezuikit/player-hls';
 
 // 默认自动播放
-const player = new HLSPlayer({
+const player = new HlsPlayer({
   id: 'app',
   url: 'https://open.ys7.com/v3/openlive/E71992743_1_1.m3u8',
-  staticPath: "/" // decoder静态资源文件夹
+  staticPath: "/" // decoder静态资源文件夹 默认根目录
 });
 
 // 不会立即生效
