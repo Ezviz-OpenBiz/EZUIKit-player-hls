@@ -393,7 +393,7 @@ declare class UIContainer extends BasePlayer {
 /**
  * @description hls 播放器
  */
-declare class HLSPlayer extends UIContainer {
+declare class HlsPlayer extends UIContainer {
     /** WebAssembly completed loading identity */
     static __HLS_WASM_DecoderState__: number;
     private _decoderWorker;
@@ -506,4 +506,4 @@ declare class HLSPlayer extends UIContainer {
     _softPlayer(durationMs: any, fps: any, sampleRate: any, size: any, audioNone?: boolean, videoCodec?: null): void;
 }
 
-export { type HlsOptions, HLSPlayer as default };
+export { type HlsOptions, HlsPlayer as default };
