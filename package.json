@@ -1,6 +1,6 @@
 {
   "name": "@ezuikit/player-hls",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "hls播放器",
   "main": "dist/index.js",
   "umd": "dist/index.umd.js",
