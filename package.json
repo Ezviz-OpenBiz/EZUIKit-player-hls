@@ -1,6 +1,6 @@
 {
   "name": "@ezuikit/player-hls",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "hls播放器",
   "main": "dist/index.js",
   "umd": "dist/index.umd.js",
@@ -33,7 +33,7 @@
     "eventemitter3": "^5.0.1",
     "hls.js": "^1.5.7",
     "lodash-es": "^4.17.21",
-    "screenfull": "^6.0.2",
+    "screenfull": "^5.2.0",
     "ua-parser-js": "1.0.37",
     "@ezuikit/player-base": "0.1.0",
     "@ezuikit/utils-collect": "^0.1.0"

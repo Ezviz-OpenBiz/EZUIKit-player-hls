@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@ezuikit/player-hls':
-    specifier: ^0.1.0
-    version: 0.1.0
+    specifier: ^0.1.2
+    version: 0.1.2
   vue:
     specifier: ^3.3.4
     version: 3.4.35
@@ -307,8 +307,8 @@ packages:
       ua-parser-js: 1.0.37
     dev: false
 
-  /@ezuikit/player-hls@0.1.0:
-    resolution: {integrity: sha512-T5PCj65mw3mP1MpfJOrx/MXpNZFMrW37fjjYnil1rCuy6ACGBNWXFVvOlzuh5k7G4DFV+HjbbMJnG21icNdZnw==}
+  /@ezuikit/player-hls@0.1.2:
+    resolution: {integrity: sha512-88ENi5bZ58YWGrXApAPMVglmwXrvPbr/y681tniU9P3kfcZNkRVLgVrXbiamCFudZo6YtZuGlBBJqf2+xH5a+w==}
     dependencies:
       '@ezuikit/player-base': 0.1.0
       '@ezuikit/utils-collect': 0.1.0
@@ -319,7 +319,7 @@ packages:
       eventemitter3: 5.0.1
       hls.js: 1.5.13
       lodash-es: 4.17.21
-      screenfull: 6.0.2
+      screenfull: 5.2.0
       ua-parser-js: 1.0.37
     dev: false
 
@@ -1185,6 +1185,11 @@ packages:
     dependencies:
       queue-microtask: 1.2.3
     dev: true
+
+  /screenfull@5.2.0:
+    resolution: {integrity: sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==}
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   /screenfull@6.0.2:
     resolution: {integrity: sha512-AQdy8s4WhNvUZ6P8F6PB21tSPIYKniic+Ogx0AacBMjKP1GUHN2E9URxQHtCusiwxudnCKkdy4GrHXPPJSkCCw==}

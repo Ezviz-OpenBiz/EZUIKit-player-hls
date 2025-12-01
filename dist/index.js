@@ -1,7 +1,7 @@
 /*
 *
-* HlsPlayer.js v0.1.0
-* Copyright (c) 2024-8-1 Ezviz-OpenBiz
+* HlsPlayer.js v0.1.2
+* Copyright (c) 2025-12-01 Ezviz-OpenBiz
 * .
 *
 */
