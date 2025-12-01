@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@ezuikit/player-hls':
-    specifier: ^0.1.0
-    version: 0.1.0
+    specifier: 0.1.1-beta.2
+    version: 0.1.1-beta.2
   '@testing-library/jest-dom':
     specifier: ^5.17.0
     version: 5.17.0
@@ -1785,47 +1785,47 @@ packages:
   /@ezuikit/player-base@0.1.0:
     resolution: {integrity: sha512-IcJqnZr9FmjBCnIrmqY7oHdyDuYxRWhDZB+K+gi+4oenFjFV4aLCCG7RFPxkidHzi3TTF2f1Bm5yObZzNDqkfw==}
     dependencies:
-      '@ezuikit/utils-collect': 0.1.0
-      '@ezuikit/utils-logger': 1.0.1
-      '@ezuikit/utils-tools': 1.0.3
+      '@ezuikit/utils-collect': 0.1.1
+      '@ezuikit/utils-logger': 1.1.0
+      '@ezuikit/utils-tools': 1.1.0
       eventemitter3: 5.0.1
       lodash-es: 4.17.21
       screenfull: 6.0.2
       ua-parser-js: 1.0.37
     dev: false
 
-  /@ezuikit/player-hls@0.1.0:
-    resolution: {integrity: sha512-T5PCj65mw3mP1MpfJOrx/MXpNZFMrW37fjjYnil1rCuy6ACGBNWXFVvOlzuh5k7G4DFV+HjbbMJnG21icNdZnw==}
+  /@ezuikit/player-hls@0.1.1-beta.2:
+    resolution: {integrity: sha512-8UwonHJLP4PAsYoMhtKJcf6HTGUsxR41bKZC5jm5B7kj20+cE4NBqvDc58HT7ErepBeAcKs0xUXAt9aHKhjQGA==}
     dependencies:
       '@ezuikit/player-base': 0.1.0
-      '@ezuikit/utils-collect': 0.1.0
-      '@ezuikit/utils-i18n': 1.0.1
-      '@ezuikit/utils-logger': 1.0.1
-      '@ezuikit/utils-tools': 1.0.3
-      dayjs: 1.11.12
+      '@ezuikit/utils-collect': 0.1.1
+      '@ezuikit/utils-i18n': 1.1.1
+      '@ezuikit/utils-logger': 1.1.0
+      '@ezuikit/utils-tools': 1.1.0
+      dayjs: 1.11.19
       eventemitter3: 5.0.1
-      hls.js: 1.5.13
+      hls.js: 1.6.15
       lodash-es: 4.17.21
-      screenfull: 6.0.2
+      screenfull: 5.2.0
       ua-parser-js: 1.0.37
     dev: false
 
-  /@ezuikit/utils-collect@0.1.0:
-    resolution: {integrity: sha512-85lWlB/VCaooPPkCK3nEB4F3UKgO+HbmoPEq4U1tH/ObVP7IJ7eURrFUmQT1CKsqjH5xz5g4DgZzHWgYrwGcCQ==}
+  /@ezuikit/utils-collect@0.1.1:
+    resolution: {integrity: sha512-BgEOnTtAq8rQRBAKv5rLXbQLGOnfOZ6NS0QTmiviey80JbMJlxrLiqmjL5lxvkm4JtCcXCtSgPA4tskQKN4eDA==}
     dev: false
 
-  /@ezuikit/utils-i18n@1.0.1:
-    resolution: {integrity: sha512-uUjN3ADHV2ZG4QznuA7FB89/ck8AGV4qS8hm/sqeSA6/ie4ryYw8MS4wIv71WgPBIgIVDfASuEapyLOwq7R2aQ==}
+  /@ezuikit/utils-i18n@1.1.1:
+    resolution: {integrity: sha512-PZe37fHfjUbhArXaoWMxbGOnU1R6k8XV7NroB3n2uL+z06SajozxO5TQARrk7Z72USQPvUsyaKIBcwVNjWK6/w==}
     dependencies:
-      i18n-js: 4.4.3
+      deepmerge: 4.3.1
     dev: false
 
-  /@ezuikit/utils-logger@1.0.1:
-    resolution: {integrity: sha512-qak0MXh4vWZCji3aSCfHdWR3EbZCaqS0iMT8/QWuWPRr0vDmTRMP3kFOAw1MuMraR0ocjPBE2PaTEmUuwVqaAw==}
+  /@ezuikit/utils-logger@1.1.0:
+    resolution: {integrity: sha512-l/PiFZIC/VtW2l1oEjZEXfeYKFkPvX1kAlljXc1nRImNOI9t71/2oyTTkqkZvMLP/EG5regD9wuQplcvtfubUg==}
     dev: false
 
-  /@ezuikit/utils-tools@1.0.3:
-    resolution: {integrity: sha512-4vJOFAAmmIojfCf43LwXwQNffoyUad2c/HOZwNexHsMqcvC/yLeDmqm5Y5Kp4BoZT/LHfMpy9fJJ3W22+ikXaQ==}
+  /@ezuikit/utils-tools@1.1.0:
+    resolution: {integrity: sha512-mujPtXIhZnuJrJySu1/Z6X90sMJQStZydurZcfetMCH6pqIYN4P+1w6+P8PCTR6k4LJp5nY9+eNnKa7AZ8OBKA==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.14:
@@ -3642,10 +3642,6 @@ packages:
     resolution: {integrity: sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==}
     dev: false
 
-  /bignumber.js@9.1.2:
-    resolution: {integrity: sha512-2/mKyZH9K85bzOEfhXDBFZTGd1CTs+5IHpeFQo9luiBG7hghdC851Pj2WAhb6E3R6b9tZj/XKhbg4fum+Kepug==}
-    dev: false
-
   /binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
@@ -4367,8 +4363,8 @@ packages:
       is-data-view: 1.0.1
     dev: false
 
-  /dayjs@1.11.12:
-    resolution: {integrity: sha512-Rt2g+nTbLlDWZTwwrIXjy9MeiZmSDI375FvZs72ngxx8PDC6YXOeR3q5LAuPzjZQxhiWdRKac7RKV+YyQYfYIg==}
+  /dayjs@1.11.19:
+    resolution: {integrity: sha512-t5EcLVS6QPBNqM2z8fakk/NKel+Xzshgt8FFKAn+qwlD1pzZWxh0nVCrvFK7ZDb6XucZeF9z8C7CBWTRIVApAw==}
     dev: false
 
   /debug@2.6.9:
@@ -5173,6 +5169,7 @@ packages:
   /eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0)
@@ -5855,8 +5852,8 @@ packages:
     hasBin: true
     dev: false
 
-  /hls.js@1.5.13:
-    resolution: {integrity: sha512-xRgKo84nsC7clEvSfIdgn/Tc0NOT+d7vdiL/wvkLO+0k0juc26NRBPPG1SfB8pd5bHXIjMW/F5VM8VYYkOYYdw==}
+  /hls.js@1.6.15:
+    resolution: {integrity: sha512-E3a5VwgXimGHwpRGV+WxRTKeSp2DW5DI5MWv34ulL3t5UNmyJWCQ1KmLEHbYzcfThfXG8amBL+fCYPneGHC4VA==}
     dev: false
 
   /hoopy@0.1.4:
@@ -6014,14 +6011,6 @@ packages:
   /human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
-    dev: false
-
-  /i18n-js@4.4.3:
-    resolution: {integrity: sha512-QIIyvJ+wOKdigL4BlgwiFFrpoXeGdlC8EYgori64YSWm1mnhNYYjIfRu5wETFrmiNP2fyD6xIjVG8dlzaiQr/A==}
-    dependencies:
-      bignumber.js: 9.1.2
-      lodash: 4.17.21
-      make-plural: 7.4.0
     dev: false
 
   /iconv-lite@0.4.24:
@@ -7398,10 +7387,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       semver: 7.6.3
-    dev: false
-
-  /make-plural@7.4.0:
-    resolution: {integrity: sha512-4/gC9KVNTV6pvYg2gFeQYTW3mWaoJt7WZE5vrp1KnQDgW92JtYZnzmZT81oj/dUTqAIu0ufI2x3dkgu3bB1tYg==}
     dev: false
 
   /makeerror@1.0.12:
@@ -9453,6 +9438,11 @@ packages:
       ajv: 8.17.1
       ajv-formats: 2.1.1(ajv@8.17.1)
       ajv-keywords: 5.1.0(ajv@8.17.1)
+    dev: false
+
+  /screenfull@5.2.0:
+    resolution: {integrity: sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==}
+    engines: {node: '>=0.10.0'}
     dev: false
 
   /screenfull@6.0.2:

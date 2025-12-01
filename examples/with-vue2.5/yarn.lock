@@ -646,58 +646,57 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.28.5"
 
-"@ezuikit/player-ezopen@8.2.2-beta.5":
-  version "8.2.2-beta.5"
-  resolved "https://registry.yarnpkg.com/@ezuikit/player-ezopen/-/player-ezopen-8.2.2-beta.5.tgz#901205ade18c4821ace1af652064c6a12fb672e6"
-  integrity sha512-ohA86UGWWizx+X4pw9h9qh5sVuPt9QHxS38E76IqOlsQFszYtT8Q/KuJ3ONhulX2KZRpxkEDkyjyFzpT/6T/Cw==
+"@ezuikit/player-base@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@ezuikit/player-base/-/player-base-0.1.0.tgz#8e0a7c063e9b8e24dd70123294bad4df8eb2d61d"
+  integrity sha512-IcJqnZr9FmjBCnIrmqY7oHdyDuYxRWhDZB+K+gi+4oenFjFV4aLCCG7RFPxkidHzi3TTF2f1Bm5yObZzNDqkfw==
   dependencies:
-    "@ezuikit/player-plugin-record" "8.2.1"
-    "@ezuikit/utils-i18n" "2.0.0"
-    "@ezuikit/utils-logger" "2.0.0"
-    "@ezuikit/utils-service" "2.0.0-beta.2"
-    "@ezuikit/utils-tools" "2.0.1-beta.1"
-    dayjs "^1.11.10"
-    deepmerge "^4.3.1"
+    "@ezuikit/utils-collect" "^0.1.0"
+    "@ezuikit/utils-logger" "^1.0.1"
+    "@ezuikit/utils-tools" "^1.0.2"
     eventemitter3 "^5.0.1"
+    lodash-es "^4.17.21"
+    screenfull "^6.0.2"
+    ua-parser-js "1.0.37"
+
+"@ezuikit/player-hls@0.1.1-beta.2":
+  version "0.1.1-beta.2"
+  resolved "https://registry.yarnpkg.com/@ezuikit/player-hls/-/player-hls-0.1.1-beta.2.tgz#0c3efc8596a7776013843e26c9b2074e91dc9e22"
+  integrity sha512-8UwonHJLP4PAsYoMhtKJcf6HTGUsxR41bKZC5jm5B7kj20+cE4NBqvDc58HT7ErepBeAcKs0xUXAt9aHKhjQGA==
+  dependencies:
+    "@ezuikit/player-base" "0.1.0"
+    "@ezuikit/utils-collect" "^0.1.0"
+    "@ezuikit/utils-i18n" "^1.0.1"
+    "@ezuikit/utils-logger" "^1.0.1"
+    "@ezuikit/utils-tools" "^1.0.2"
+    dayjs "^1.11.10"
+    eventemitter3 "^5.0.1"
+    hls.js "^1.5.7"
+    lodash-es "^4.17.21"
     screenfull "^5.2.0"
     ua-parser-js "1.0.37"
 
-"@ezuikit/player-plugin-record@8.2.1":
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/@ezuikit/player-plugin-record/-/player-plugin-record-8.2.1.tgz#13e6a4b4f9200972d03d01eb02689ae4e91d2cd4"
-  integrity sha512-HlWQbd6SOWya5xo0EplsEIGPt52EQrVqNm/jHQMZKqslkiEzCDVUUvUYoFbl3fa5xf7Lh1a+YIATm/4L4iZKng==
-  dependencies:
-    uuid "8.3.0"
-
-"@ezuikit/utils-collect@0.1.1":
+"@ezuikit/utils-collect@^0.1.0":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@ezuikit/utils-collect/-/utils-collect-0.1.1.tgz#b9b49b1a2ef762c1d33b8a154bdd571e9cd965da"
   integrity sha512-BgEOnTtAq8rQRBAKv5rLXbQLGOnfOZ6NS0QTmiviey80JbMJlxrLiqmjL5lxvkm4JtCcXCtSgPA4tskQKN4eDA==
 
-"@ezuikit/utils-i18n@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@ezuikit/utils-i18n/-/utils-i18n-2.0.0.tgz#41dceba7b09043e1a5baffce36ca0e0de36c7cc4"
-  integrity sha512-gMkfdwFTRk3bAkUVWRGPyEsQl4aIImBpQp732aSSHA75LFPi1MmdaB2Xf34OeC+4v+Anpbt75vviCpUrKPMKlQ==
+"@ezuikit/utils-i18n@^1.0.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@ezuikit/utils-i18n/-/utils-i18n-1.1.1.tgz#a9d05d1ab96341450e07477d5ab04f494c390332"
+  integrity sha512-PZe37fHfjUbhArXaoWMxbGOnU1R6k8XV7NroB3n2uL+z06SajozxO5TQARrk7Z72USQPvUsyaKIBcwVNjWK6/w==
   dependencies:
     deepmerge "^4.3.1"
 
-"@ezuikit/utils-logger@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@ezuikit/utils-logger/-/utils-logger-2.0.0.tgz#f3ffeb0a5d485e6a83710b2a924695f2a66786c3"
-  integrity sha512-xtq7Vwle75pfA1UfmcsO2cAdqu9n04fxXDu32fpta7A99ENgyk8saK1NRxeiLnqQHdibaIAmrIbfehgLAH6ecQ==
+"@ezuikit/utils-logger@^1.0.1":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@ezuikit/utils-logger/-/utils-logger-1.1.0.tgz#5730becccd35f7704592b4fbe2bdcae0fd9e8c8b"
+  integrity sha512-l/PiFZIC/VtW2l1oEjZEXfeYKFkPvX1kAlljXc1nRImNOI9t71/2oyTTkqkZvMLP/EG5regD9wuQplcvtfubUg==
 
-"@ezuikit/utils-service@2.0.0-beta.2":
-  version "2.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@ezuikit/utils-service/-/utils-service-2.0.0-beta.2.tgz#ae7f104b6ddb0afc6a3fe80d694154b2bceed3a4"
-  integrity sha512-Ta27VRDZK1LRRQ9YznYxCqMIeCnO4hnhzQNir3R6ieMy0MnV1pjblVJo2f/f/DRhncNqEHW8IUEcOTKBiIbX8Q==
-  dependencies:
-    "@ezuikit/utils-tools" "^2.0.1-beta.1"
-    dayjs "^1.11.10"
-
-"@ezuikit/utils-tools@2.0.1-beta.1", "@ezuikit/utils-tools@^2.0.1-beta.1":
-  version "2.0.1-beta.1"
-  resolved "https://registry.yarnpkg.com/@ezuikit/utils-tools/-/utils-tools-2.0.1-beta.1.tgz#dbfebed524e66e58812d3d57b825eb4791138f8c"
-  integrity sha512-TDH7G6NXG55d7gRDAcAhMoC4ZyjsJ8tEGiXGnZ0Bzf+jxy1y6el9gm0jCBz9pwCuJSWFttH3l1nd6P9+57+oVg==
+"@ezuikit/utils-tools@^1.0.2":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@ezuikit/utils-tools/-/utils-tools-1.1.0.tgz#2986443242e4e20c4aa1250030a5cbe5a43c58b5"
+  integrity sha512-mujPtXIhZnuJrJySu1/Z6X90sMJQStZydurZcfetMCH6pqIYN4P+1w6+P8PCTR6k4LJp5nY9+eNnKa7AZ8OBKA==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -773,11 +772,6 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
-
-"@juggle/resize-observer@^3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.4.0.tgz#08d6c5e20cf7e4cc02fd181c4b0c225cd31dbb60"
-  integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -1225,11 +1219,6 @@
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
-
-abortcontroller-polyfill@^1.7.5:
-  version "1.7.8"
-  resolved "https://registry.yarnpkg.com/abortcontroller-polyfill/-/abortcontroller-polyfill-1.7.8.tgz#fe8d4370403f02e2aa37e3d2b0b178bae9d83f49"
-  integrity sha512-9f1iZ2uWh92VcrU9Y8x+LdM4DLj75VE0MJB8zuF1iUnroEptStw+DQ8EQPMUdfe5k+PkB1uUfDQfWbhstH8LrQ==
 
 accepts@~1.3.4, accepts@~1.3.8:
   version "1.3.8"
@@ -2729,11 +2718,6 @@ de-indent@^1.0.2:
   resolved "https://registry.yarnpkg.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
   integrity sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==
 
-debounce-promise@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/debounce-promise/-/debounce-promise-3.1.2.tgz#320fb8c7d15a344455cd33cee5ab63530b6dc7c5"
-  integrity sha512-rZHcgBkbYavBeD9ej6sP56XfG53d51CD4dnaw989YX/nZ/ZJfgRx/9ePKmTNiUiyQvh4mtrMoS3OAWW+yoYtpg==
-
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -2866,11 +2850,6 @@ delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==
-
-delegate@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
-  integrity sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==
 
 depd@2.0.0:
   version "2.0.0"
@@ -3465,25 +3444,6 @@ extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.1.tgz#8d172c064867f235c0c84a596806d279bf4bcc07"
   integrity sha512-Wrk35e8ydCKDj/ArClo1VrPVmN8zph5V4AtHwIuHhvMXsKf73UT3BOD+azBIW+3wOJ4FhEH7zyaJCFvChjYvMA==
 
-ezuikit-js@8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/ezuikit-js/-/ezuikit-js-8.2.0.tgz#a54567dd90b7cb9a78cd1e3c9ff5c6cdaa295858"
-  integrity sha512-Yt+1GWce3vqty50jU1Fi4ac90Kbq25D2AJnIhV0e6uuBXEHLmqoyS1uWaKVUiVbR7MVjwVY8ab0Vk8LButF83g==
-  dependencies:
-    "@ezuikit/player-ezopen" "8.2.2-beta.5"
-    "@ezuikit/utils-collect" "0.1.1"
-    "@ezuikit/utils-i18n" "2.0.0"
-    "@ezuikit/utils-logger" "2.0.0"
-    "@ezuikit/utils-tools" "2.0.1-beta.1"
-    "@juggle/resize-observer" "^3.4.0"
-    abortcontroller-polyfill "^1.7.5"
-    debounce-promise "^3.1.2"
-    deepmerge "^4.3.1"
-    delegate "3.2.0"
-    formdata-polyfill "^4.0.10"
-    lodash-es "^4.17.21"
-    screenfull "^5.2.0"
-
 fast-deep-equal@^3.1.1:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
@@ -3517,14 +3477,6 @@ faye-websocket@^0.11.3, faye-websocket@^0.11.4:
   integrity sha512-CzbClwlXAuiRQAlUyfqPgvPoNKTckTPGfwZV4ZdAhVcP2lh9KUxJg2b5GkE7XbjKQ3YJnQ9z6D9ntLAlB+tP8g==
   dependencies:
     websocket-driver ">=0.5.1"
-
-fetch-blob@^3.1.2:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/fetch-blob/-/fetch-blob-3.2.0.tgz#f09b8d4bbd45adc6f0c20b7e787e793e309dcce9"
-  integrity sha512-7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ==
-  dependencies:
-    node-domexception "^1.0.0"
-    web-streams-polyfill "^3.0.3"
 
 figgy-pudding@^3.5.1:
   version "3.5.2"
@@ -3674,13 +3626,6 @@ form-data@~2.3.2:
     asynckit "^0.4.0"
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
-
-formdata-polyfill@^4.0.10:
-  version "4.0.10"
-  resolved "https://registry.yarnpkg.com/formdata-polyfill/-/formdata-polyfill-4.0.10.tgz#24807c31c9d402e002ab3d8c720144ceb8848423"
-  integrity sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==
-  dependencies:
-    fetch-blob "^3.1.2"
 
 forwarded@0.2.0:
   version "0.2.0"
@@ -4089,6 +4034,11 @@ highlight.js@^10.7.1:
   version "10.7.3"
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
   integrity sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==
+
+hls.js@^1.5.7:
+  version "1.6.15"
+  resolved "https://registry.yarnpkg.com/hls.js/-/hls.js-1.6.15.tgz#9ce13080d143a9bc9b903fb43f081e335b8321e5"
+  integrity sha512-E3a5VwgXimGHwpRGV+WxRTKeSp2DW5DI5MWv34ulL3t5UNmyJWCQ1KmLEHbYzcfThfXG8amBL+fCYPneGHC4VA==
 
 hmac-drbg@^1.0.1:
   version "1.0.1"
@@ -5447,11 +5397,6 @@ no-case@^2.2.0:
   integrity sha512-rmTZ9kz+f3rCvK2TD1Ue/oZlns7OGoIWP4fc3llxxRXlOkHKoWPPWJOfFYpITabSow43QJbRIoHQXtt10VldyQ==
   dependencies:
     lower-case "^1.1.1"
-
-node-domexception@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/node-domexception/-/node-domexception-1.0.0.tgz#6888db46a1f71c0b76b3f7555016b63fe64766e5"
-  integrity sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==
 
 node-forge@^0.10.0:
   version "0.10.0"
@@ -6943,7 +6888,7 @@ schema-utils@^2.6.5:
     ajv "^6.12.4"
     ajv-keywords "^3.5.2"
 
-screenfull@^5.2.0:
+screenfull@^5.2.0, screenfull@^6.0.2:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/screenfull/-/screenfull-5.2.0.tgz#6533d524d30621fc1283b9692146f3f13a93d1ba"
   integrity sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==
@@ -8075,11 +8020,6 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==
 
-uuid@8.3.0:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
-  integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
-
 uuid@^3.3.2:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
@@ -8203,11 +8143,6 @@ wcwidth@^1.0.1:
   integrity sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg==
   dependencies:
     defaults "^1.0.3"
-
-web-streams-polyfill@^3.0.3:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.3.3.tgz#2073b91a2fdb1fbfbd401e7de0ac9f8214cecb4b"
-  integrity sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==
 
 webpack-bundle-analyzer@^3.3.0:
   version "3.9.0"

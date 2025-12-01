@@ -34,11 +34,13 @@ function Player() {
   const createPlayer = () => {
     const url = urlRef.current.value;
     if (!playerRef.current) {
+      // 依赖的解码资源在 public 目录下 (必须的)
       playerRef.current = new HlsPlayer({
         id: "player-container",
         url,
       });
-      playerRef.current.play();
+      // 默认自动播放
+      // playerRef.current.play();
     }
   };
 
@@ -96,7 +98,7 @@ function Player() {
             style={{ width: 600 }}
             placeholder="输入播放地址"
             ref={urlRef}
-            defaultValue=""
+            defaultValue="https://open.ys7.com/v3/openlive/L28647609_1_1.m3u8?expire=1764621652&id=915734222503677952&t=f61fd1b82f26ab47b8e3e6a062a4c5ea80303850f21910f1cedeef908c782b68&ev=101&supportH265=1"
           />
         </div>
         <div>
