@@ -10,7 +10,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "@ezuikit/player-hls": "0.1.1-beta.2"
+    "@ezuikit/player-hls": "0.1.2"
   },
   "scripts": {
     "dev": "react-scripts start",
