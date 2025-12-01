@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@ezuikit/player-hls':
-    specifier: ^0.1.1-beta.2
-    version: 0.1.1-beta.2
+    specifier: ^0.1.2
+    version: 0.1.2
   vue:
     specifier: ^3.3.4
     version: 3.4.35
@@ -307,8 +307,8 @@ packages:
       ua-parser-js: 1.0.37
     dev: false
 
-  /@ezuikit/player-hls@0.1.1-beta.2:
-    resolution: {integrity: sha512-8UwonHJLP4PAsYoMhtKJcf6HTGUsxR41bKZC5jm5B7kj20+cE4NBqvDc58HT7ErepBeAcKs0xUXAt9aHKhjQGA==}
+  /@ezuikit/player-hls@0.1.2:
+    resolution: {integrity: sha512-88ENi5bZ58YWGrXApAPMVglmwXrvPbr/y681tniU9P3kfcZNkRVLgVrXbiamCFudZo6YtZuGlBBJqf2+xH5a+w==}
     dependencies:
       '@ezuikit/player-base': 0.1.0
       '@ezuikit/utils-collect': 0.1.0

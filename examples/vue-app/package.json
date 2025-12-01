@@ -10,7 +10,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@ezuikit/player-hls": "^0.1.1-beta.2",
+    "@ezuikit/player-hls": "^0.1.2",
     "vue": "^3.3.4"
   },
   "devDependencies": {

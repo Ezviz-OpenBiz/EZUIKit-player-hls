@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^2.5.17",
-    "@ezuikit/player-hls": "0.1.1-beta.2"
+    "@ezuikit/player-hls": "0.1.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.1",

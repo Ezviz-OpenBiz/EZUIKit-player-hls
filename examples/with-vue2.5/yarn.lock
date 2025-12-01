@@ -659,10 +659,10 @@
     screenfull "^6.0.2"
     ua-parser-js "1.0.37"
 
-"@ezuikit/player-hls@0.1.1-beta.2":
-  version "0.1.1-beta.2"
-  resolved "https://registry.yarnpkg.com/@ezuikit/player-hls/-/player-hls-0.1.1-beta.2.tgz#0c3efc8596a7776013843e26c9b2074e91dc9e22"
-  integrity sha512-8UwonHJLP4PAsYoMhtKJcf6HTGUsxR41bKZC5jm5B7kj20+cE4NBqvDc58HT7ErepBeAcKs0xUXAt9aHKhjQGA==
+"@ezuikit/player-hls@0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@ezuikit/player-hls/-/player-hls-0.1.2.tgz#ab9853a03fe2e1d4a814d5fb45ae26b902677907"
+  integrity sha512-88ENi5bZ58YWGrXApAPMVglmwXrvPbr/y681tniU9P3kfcZNkRVLgVrXbiamCFudZo6YtZuGlBBJqf2+xH5a+w==
   dependencies:
     "@ezuikit/player-base" "0.1.0"
     "@ezuikit/utils-collect" "^0.1.0"
