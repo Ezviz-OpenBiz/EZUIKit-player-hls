@@ -22,7 +22,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Build with-vue2.5
-        working-directory: ./demos/with-vue2.5
+        working-directory: ./examples/with-vue2.5
         run: |
           yarn install
           yarn run build
