@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@ezuikit/player-base':
-    specifier: 0.1.0
-    version: 0.1.0
+    specifier: 0.1.1
+    version: 0.1.1
   '@ezuikit/utils-collect':
     specifier: ^0.1.0
     version: 0.1.0
@@ -41,15 +41,15 @@ dependencies:
 
 packages:
 
-  /@ezuikit/player-base@0.1.0:
-    resolution: {integrity: sha512-IcJqnZr9FmjBCnIrmqY7oHdyDuYxRWhDZB+K+gi+4oenFjFV4aLCCG7RFPxkidHzi3TTF2f1Bm5yObZzNDqkfw==}
+  /@ezuikit/player-base@0.1.1:
+    resolution: {integrity: sha512-BJSLl+VEca/r07IaOwoZ9pZGs+3YmY+aTNAdEi3VL+kFbFg9cq+hrkar6GuNKRq6dJVHEBlDPZkAjpIgvA6NiA==}
     dependencies:
       '@ezuikit/utils-collect': 0.1.0
       '@ezuikit/utils-logger': 1.0.1
       '@ezuikit/utils-tools': 1.0.3
       eventemitter3: 5.0.1
       lodash-es: 4.17.21
-      screenfull: 6.0.2
+      screenfull: 5.2.0
       ua-parser-js: 1.0.37
     dev: false
 
@@ -110,11 +110,6 @@ packages:
   /screenfull@5.2.0:
     resolution: {integrity: sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==}
     engines: {node: '>=0.10.0'}
-    dev: false
-
-  /screenfull@6.0.2:
-    resolution: {integrity: sha512-AQdy8s4WhNvUZ6P8F6PB21tSPIYKniic+Ogx0AacBMjKP1GUHN2E9URxQHtCusiwxudnCKkdy4GrHXPPJSkCCw==}
-    engines: {node: ^14.13.1 || >=16.0.0}
     dev: false
 
   /ua-parser-js@1.0.37:

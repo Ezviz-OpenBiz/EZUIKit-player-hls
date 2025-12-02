@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@ezuikit/player-base@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@ezuikit/player-base/-/player-base-0.1.0.tgz#8e0a7c063e9b8e24dd70123294bad4df8eb2d61d"
-  integrity sha512-IcJqnZr9FmjBCnIrmqY7oHdyDuYxRWhDZB+K+gi+4oenFjFV4aLCCG7RFPxkidHzi3TTF2f1Bm5yObZzNDqkfw==
+"@ezuikit/player-base@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@ezuikit/player-base/-/player-base-0.1.1.tgz#e376fc6f6bf9a1e534143145ee0fe268ec9a3c8b"
+  integrity sha512-BJSLl+VEca/r07IaOwoZ9pZGs+3YmY+aTNAdEi3VL+kFbFg9cq+hrkar6GuNKRq6dJVHEBlDPZkAjpIgvA6NiA==
   dependencies:
     "@ezuikit/utils-collect" "^0.1.0"
     "@ezuikit/utils-logger" "^1.0.1"
     "@ezuikit/utils-tools" "^1.0.2"
     eventemitter3 "^5.0.1"
     lodash-es "^4.17.21"
-    screenfull "^6.0.2"
+    screenfull "^5.2.0"
     ua-parser-js "1.0.37"
 
 "@ezuikit/utils-collect@^0.1.0":
@@ -85,11 +85,6 @@ screenfull@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/screenfull/-/screenfull-5.2.0.tgz#6533d524d30621fc1283b9692146f3f13a93d1ba"
   integrity sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==
-
-screenfull@^6.0.2:
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/screenfull/-/screenfull-6.0.2.tgz#3dbe4b8c4f8f49fb8e33caa8f69d0bca730ab238"
-  integrity sha512-AQdy8s4WhNvUZ6P8F6PB21tSPIYKniic+Ogx0AacBMjKP1GUHN2E9URxQHtCusiwxudnCKkdy4GrHXPPJSkCCw==
 
 ua-parser-js@1.0.37:
   version "1.0.37"
