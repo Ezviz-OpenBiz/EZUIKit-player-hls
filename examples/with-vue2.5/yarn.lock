@@ -646,25 +646,25 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.28.5"
 
-"@ezuikit/player-base@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@ezuikit/player-base/-/player-base-0.1.0.tgz#8e0a7c063e9b8e24dd70123294bad4df8eb2d61d"
-  integrity sha512-IcJqnZr9FmjBCnIrmqY7oHdyDuYxRWhDZB+K+gi+4oenFjFV4aLCCG7RFPxkidHzi3TTF2f1Bm5yObZzNDqkfw==
+"@ezuikit/player-base@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@ezuikit/player-base/-/player-base-0.1.1.tgz#e376fc6f6bf9a1e534143145ee0fe268ec9a3c8b"
+  integrity sha512-BJSLl+VEca/r07IaOwoZ9pZGs+3YmY+aTNAdEi3VL+kFbFg9cq+hrkar6GuNKRq6dJVHEBlDPZkAjpIgvA6NiA==
   dependencies:
     "@ezuikit/utils-collect" "^0.1.0"
     "@ezuikit/utils-logger" "^1.0.1"
     "@ezuikit/utils-tools" "^1.0.2"
     eventemitter3 "^5.0.1"
     lodash-es "^4.17.21"
-    screenfull "^6.0.2"
+    screenfull "^5.2.0"
     ua-parser-js "1.0.37"
 
-"@ezuikit/player-hls@0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@ezuikit/player-hls/-/player-hls-0.1.2.tgz#ab9853a03fe2e1d4a814d5fb45ae26b902677907"
-  integrity sha512-88ENi5bZ58YWGrXApAPMVglmwXrvPbr/y681tniU9P3kfcZNkRVLgVrXbiamCFudZo6YtZuGlBBJqf2+xH5a+w==
+"@ezuikit/player-hls@0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@ezuikit/player-hls/-/player-hls-0.1.3.tgz#c7450137591d286dd782ad74545f6016c2faa8ff"
+  integrity sha512-VJKjcs5iyy4aUYpsPDbzofPrFnA81B8FBvqEU/pt9MpsCUs1WwrU+lbBsSrNfJeT/uk+BBJr8CFfbJay/2EQig==
   dependencies:
-    "@ezuikit/player-base" "0.1.0"
+    "@ezuikit/player-base" "0.1.1"
     "@ezuikit/utils-collect" "^0.1.0"
     "@ezuikit/utils-i18n" "^1.0.1"
     "@ezuikit/utils-logger" "^1.0.1"
@@ -6888,7 +6888,7 @@ schema-utils@^2.6.5:
     ajv "^6.12.4"
     ajv-keywords "^3.5.2"
 
-screenfull@^5.2.0, screenfull@^6.0.2:
+screenfull@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/screenfull/-/screenfull-5.2.0.tgz#6533d524d30621fc1283b9692146f3f13a93d1ba"
   integrity sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==

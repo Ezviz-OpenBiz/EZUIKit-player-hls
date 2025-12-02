@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@ezuikit/player-hls':
-    specifier: ^0.1.2
-    version: 0.1.2
+    specifier: ^0.1.3
+    version: 0.1.3
   vue:
     specifier: ^3.3.4
     version: 3.4.35
@@ -295,22 +295,22 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@ezuikit/player-base@0.1.0:
-    resolution: {integrity: sha512-IcJqnZr9FmjBCnIrmqY7oHdyDuYxRWhDZB+K+gi+4oenFjFV4aLCCG7RFPxkidHzi3TTF2f1Bm5yObZzNDqkfw==}
+  /@ezuikit/player-base@0.1.1:
+    resolution: {integrity: sha512-BJSLl+VEca/r07IaOwoZ9pZGs+3YmY+aTNAdEi3VL+kFbFg9cq+hrkar6GuNKRq6dJVHEBlDPZkAjpIgvA6NiA==}
     dependencies:
       '@ezuikit/utils-collect': 0.1.0
       '@ezuikit/utils-logger': 1.0.1
       '@ezuikit/utils-tools': 1.0.3
       eventemitter3: 5.0.1
       lodash-es: 4.17.21
-      screenfull: 6.0.2
+      screenfull: 5.2.0
       ua-parser-js: 1.0.37
     dev: false
 
-  /@ezuikit/player-hls@0.1.2:
-    resolution: {integrity: sha512-88ENi5bZ58YWGrXApAPMVglmwXrvPbr/y681tniU9P3kfcZNkRVLgVrXbiamCFudZo6YtZuGlBBJqf2+xH5a+w==}
+  /@ezuikit/player-hls@0.1.3:
+    resolution: {integrity: sha512-VJKjcs5iyy4aUYpsPDbzofPrFnA81B8FBvqEU/pt9MpsCUs1WwrU+lbBsSrNfJeT/uk+BBJr8CFfbJay/2EQig==}
     dependencies:
-      '@ezuikit/player-base': 0.1.0
+      '@ezuikit/player-base': 0.1.1
       '@ezuikit/utils-collect': 0.1.0
       '@ezuikit/utils-i18n': 1.0.1
       '@ezuikit/utils-logger': 1.0.1
@@ -1189,11 +1189,6 @@ packages:
   /screenfull@5.2.0:
     resolution: {integrity: sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==}
     engines: {node: '>=0.10.0'}
-    dev: false
-
-  /screenfull@6.0.2:
-    resolution: {integrity: sha512-AQdy8s4WhNvUZ6P8F6PB21tSPIYKniic+Ogx0AacBMjKP1GUHN2E9URxQHtCusiwxudnCKkdy4GrHXPPJSkCCw==}
-    engines: {node: ^14.13.1 || >=16.0.0}
     dev: false
 
   /semver@7.6.3:
