@@ -1,6 +1,6 @@
 ## v0.1.4
 
-## Feat
+### Feat
 
 - Add `videoInfo` event, `player.event.on("videoInfo", (info) => {})`
   
