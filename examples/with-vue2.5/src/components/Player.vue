@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      url: "https://sqhls3.ys7.com:7993/v3/openlive/BF4904736_1_1.m3u8?expire=1777443506&id=967066858175684608&t=860d4eb3c4257345eb1fcf9ab2b59066ef37e87defdc73b8e1665da2169ce6ce&ev=101&supportH265=1&vc=3&u=38faa8e5801c4464a6e51f4c328f0c88",
+      url: "https://sqhls3.ys7.com:7993/v3/openlive/BF4904736_1_1.m3u8?expire=1777443506&id=967066858175684608&t=860d4eb3c4257345eb1fcf9ab2b590ef37e87defdc73b8e1665da2169ce6ce&ev=101&supportH265=1&vc=3&u=38faa8e5801c4464a6e51f4c328f0c88",
     };
   },
   mounted() {

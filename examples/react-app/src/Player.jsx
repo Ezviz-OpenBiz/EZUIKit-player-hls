@@ -103,7 +103,7 @@ function Player() {
             style={{ width: 600 }}
             placeholder="输入播放地址"
             ref={urlRef}
-            defaultValue="https://open.ys7.com/v3/openlive/L28647609_1_2.m3u8?expire=1764644823&id=915914456004136960&t=cbad467c0cc2dcafa9e8b663e1fcee506dc0ad9863e931d77b4423a25a6e3130&ev=101&supportH265=1"
+            defaultValue="https://open.ys7.com/v3/openlive/L28647609_1_2.m3u8?expire=1764644823&id=915914456004136960&t=cbad467c0cc2dcafa9e8b663e1fcee506d0ad9863e931d77b4423a25a6e3130&ev=101&supportH265=1"
           />
         </div>
         <div>
