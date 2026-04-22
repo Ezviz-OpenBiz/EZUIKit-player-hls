@@ -46,13 +46,11 @@ export default {
       });
 
       player.event.on("videoInfo", (info) => {
-        console.warn("11111 videoInfo: ", info)
+        console.warn("videoInfo: ", info)
       })
       // 默认自动播放
       // player.play()
       window.player = player;
-
-
     },
     play() {
       if(player)
