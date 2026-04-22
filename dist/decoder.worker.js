@@ -1,7 +1,7 @@
 /*
 *
-* DecoderWorker.js v0.1.4-beta.4
-* Copyright (c) 2026-4-22 Ezviz-OpenBiz
+* DecoderWorker.js v0.1.4
+* Copyright (c) 2026-4-23 Ezviz-OpenBiz
 * .
 *
 */
