@@ -95,6 +95,10 @@
         player.on("error", (msg) => {
           console.error(msg);
         });
+        // v0.1.4
+        player.event.on("videoInfo", (info) => {
+          console.log("videoInfo", info);
+        });
       }
 
       $init.addEventListener(

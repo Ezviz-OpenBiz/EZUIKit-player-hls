@@ -13,6 +13,11 @@ onMounted(() => {
   })
   // 默认自动播放
   // player.play()
+
+  // v0.1.4
+  player.event.on("videoInfo", (info) => {
+    console.log("videoInfo", info);
+  });
 })
 </script>
 
