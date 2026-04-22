@@ -13,20 +13,20 @@ jobs:
     name: install dependencies
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
 
       # 设置 Node
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 18
           cache: npm
           registry-url: https://registry.npmjs.org
       # 安装依赖
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v5
         with:
           version: 8
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 

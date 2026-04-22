@@ -5,24 +5,18 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@ezuikit/player-base':
-    specifier: 0.1.1
-    version: 0.1.1
   '@ezuikit/utils-collect':
     specifier: ^0.1.0
     version: 0.1.0
   '@ezuikit/utils-i18n':
-    specifier: ^1.0.1
-    version: 1.0.1
+    specifier: 2.0.1
+    version: 2.0.1
   '@ezuikit/utils-logger':
-    specifier: ^1.0.1
-    version: 1.0.1
+    specifier: 2.0.1
+    version: 2.0.1
   '@ezuikit/utils-tools':
-    specifier: ^1.0.2
-    version: 1.0.3
-  dayjs:
-    specifier: ^1.11.10
-    version: 1.11.12
+    specifier: 2.0.3
+    version: 2.0.3
   eventemitter3:
     specifier: ^5.0.1
     version: 5.0.1
@@ -39,6 +33,14 @@ dependencies:
     specifier: 1.0.37
     version: 1.0.37
 
+devDependencies:
+  '@ezuikit/player-base':
+    specifier: 0.1.1
+    version: 0.1.1
+  dayjs:
+    specifier: ^1.11.10
+    version: 1.11.12
+
 packages:
 
   /@ezuikit/player-base@0.1.1:
@@ -51,67 +53,55 @@ packages:
       lodash-es: 4.17.21
       screenfull: 5.2.0
       ua-parser-js: 1.0.37
-    dev: false
+    dev: true
 
   /@ezuikit/utils-collect@0.1.0:
     resolution: {integrity: sha512-85lWlB/VCaooPPkCK3nEB4F3UKgO+HbmoPEq4U1tH/ObVP7IJ7eURrFUmQT1CKsqjH5xz5g4DgZzHWgYrwGcCQ==}
-    dev: false
 
-  /@ezuikit/utils-i18n@1.0.1:
-    resolution: {integrity: sha512-uUjN3ADHV2ZG4QznuA7FB89/ck8AGV4qS8hm/sqeSA6/ie4ryYw8MS4wIv71WgPBIgIVDfASuEapyLOwq7R2aQ==}
+  /@ezuikit/utils-i18n@2.0.1:
+    resolution: {integrity: sha512-846z2bDpCxioTBO3KG8Uw8QUFa6hzquSzmZKWPO6fjT3P4v6zNnXRz+Z3JCPlXnc4eesi03A+JmMAU6m5KI4gg==}
     dependencies:
-      i18n-js: 4.4.3
+      deepmerge: 4.3.1
     dev: false
 
   /@ezuikit/utils-logger@1.0.1:
     resolution: {integrity: sha512-qak0MXh4vWZCji3aSCfHdWR3EbZCaqS0iMT8/QWuWPRr0vDmTRMP3kFOAw1MuMraR0ocjPBE2PaTEmUuwVqaAw==}
+    dev: true
+
+  /@ezuikit/utils-logger@2.0.1:
+    resolution: {integrity: sha512-AeLLR9ZQJkSJFfCicpkVBcnOE4zyQMp4W4997sTEGyF3k3I8Upkfn4Cye2A44MIphdw6eytKlaJp6H4joSafQw==}
     dev: false
 
   /@ezuikit/utils-tools@1.0.3:
     resolution: {integrity: sha512-4vJOFAAmmIojfCf43LwXwQNffoyUad2c/HOZwNexHsMqcvC/yLeDmqm5Y5Kp4BoZT/LHfMpy9fJJ3W22+ikXaQ==}
-    dev: false
+    dev: true
 
-  /bignumber.js@9.1.2:
-    resolution: {integrity: sha512-2/mKyZH9K85bzOEfhXDBFZTGd1CTs+5IHpeFQo9luiBG7hghdC851Pj2WAhb6E3R6b9tZj/XKhbg4fum+Kepug==}
+  /@ezuikit/utils-tools@2.0.3:
+    resolution: {integrity: sha512-YvUGDU1ikjSc5YjQLh6kQWGBOpqkOczb3HiocWm7FOk9grW6IAGd3RbRu0e+XyWT20nefcEpbIhRwOYsTejjnA==}
     dev: false
 
   /dayjs@1.11.12:
     resolution: {integrity: sha512-Rt2g+nTbLlDWZTwwrIXjy9MeiZmSDI375FvZs72ngxx8PDC6YXOeR3q5LAuPzjZQxhiWdRKac7RKV+YyQYfYIg==}
+    dev: true
+
+  /deepmerge@4.3.1:
+    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
+    engines: {node: '>=0.10.0'}
     dev: false
 
   /eventemitter3@5.0.1:
     resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
-    dev: false
 
   /hls.js@1.5.13:
     resolution: {integrity: sha512-xRgKo84nsC7clEvSfIdgn/Tc0NOT+d7vdiL/wvkLO+0k0juc26NRBPPG1SfB8pd5bHXIjMW/F5VM8VYYkOYYdw==}
     dev: false
 
-  /i18n-js@4.4.3:
-    resolution: {integrity: sha512-QIIyvJ+wOKdigL4BlgwiFFrpoXeGdlC8EYgori64YSWm1mnhNYYjIfRu5wETFrmiNP2fyD6xIjVG8dlzaiQr/A==}
-    dependencies:
-      bignumber.js: 9.1.2
-      lodash: 4.17.21
-      make-plural: 7.4.0
-    dev: false
-
   /lodash-es@4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-    dev: false
-
-  /lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: false
-
-  /make-plural@7.4.0:
-    resolution: {integrity: sha512-4/gC9KVNTV6pvYg2gFeQYTW3mWaoJt7WZE5vrp1KnQDgW92JtYZnzmZT81oj/dUTqAIu0ufI2x3dkgu3bB1tYg==}
-    dev: false
 
   /screenfull@5.2.0:
     resolution: {integrity: sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /ua-parser-js@1.0.37:
     resolution: {integrity: sha512-bhTyI94tZofjo+Dn8SN6Zv8nBDvyXTymAdM3LDI/0IboIUwTu1rEhW7v2TfiVsoYWgkQ4kOVqnI8APUFbIQIFQ==}
-    dev: false
