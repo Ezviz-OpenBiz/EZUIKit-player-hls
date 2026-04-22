@@ -40,10 +40,19 @@ export default {
       player = new HlsPlayer({
         id: "video-container", // 视频容器ID
         url: this.url,
+        loggerOptions: {
+          level: "WARN",
+        },
       });
+
+      player.event.on("videoInfo", (info) => {
+        console.warn("11111 videoInfo: ", info)
+      })
       // 默认自动播放
       // player.play()
       window.player = player;
+
+
     },
     play() {
       if(player)

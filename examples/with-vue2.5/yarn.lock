@@ -646,10 +646,10 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.28.5"
 
-"@ezuikit/player-hls@0.1.4-beta.1":
-  version "0.1.4-beta.1"
-  resolved "https://registry.yarnpkg.com/@ezuikit/player-hls/-/player-hls-0.1.4-beta.1.tgz#df8394cd0e54d21eb0854de600897805c96a63e7"
-  integrity sha512-d/WNBFY/6LBfMcRDbZGwA52FdgZR7wFFrq3SzIheohxZ0Tw4MA5etwhH+1KgnevIHEXVxpOaNMZThLkl7awAZQ==
+"@ezuikit/player-hls@0.1.4-beta.2":
+  version "0.1.4-beta.2"
+  resolved "https://registry.yarnpkg.com/@ezuikit/player-hls/-/player-hls-0.1.4-beta.2.tgz#aba3993738bebc954b10c7280693dc85e1edfe20"
+  integrity sha512-pkEXblECMumfjadgYy7yxaoJB68VkjRJK8h2oBptGBw8TTX6c4je4dkdvT8FgL5rw7J8wUA70VnEQCgJbkFAFQ==
   dependencies:
     "@ezuikit/utils-collect" "^0.1.0"
     "@ezuikit/utils-i18n" "2.0.1"
