@@ -1,3 +1,9 @@
+## v0.1.5
+
+### Fixed
+
+- Fixed types
+
 ## v0.1.4
 
 ### Feat
