@@ -646,25 +646,88 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.28.5"
 
-"@ezuikit/player-hls@0.1.4-beta.4":
-  version "0.1.4-beta.4"
-  resolved "https://registry.yarnpkg.com/@ezuikit/player-hls/-/player-hls-0.1.4-beta.4.tgz#4e6e2987b17e41bc2787887fbb3918fc42548b44"
-  integrity sha512-ila7knhwt7kSzgWwPIMpXSD2uyH4Hxv/l1wCpGdBybiwclEb7tIOTfLbgWR8/rM3qXEvAggH6sQdA53+ptGskQ==
+"@ezuikit/control-date-picker@^2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-date-picker/-/control-date-picker-2.0.0-beta.4.tgz#e56d149943a46c056403c29a4f2ca129f9e23a15"
+  integrity sha512-0+uN3s8W78uSZSvWXbmFUY5kmK8I/94uWqBm9cSRlG7OtSvLCrySVXj/fbYXMrDWpXx6okHfxPZRqke6GbpK9Q==
   dependencies:
-    "@ezuikit/utils-collect" "^0.1.0"
+    "@ezuikit/utils-i18n" "2.0.0"
+    "@ezuikit/utils-tools" "2.0.3"
+    "@skax/delegate" "4.0.2"
+    "@skax/picker" "1.1.8"
+    deepmerge "^4.3.1"
+
+"@ezuikit/control-ptz@^1.0.0-beta.5":
+  version "1.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-ptz/-/control-ptz-1.0.0-beta.5.tgz#7f478d7e7e172641cbafa84a38bc79de535ef030"
+  integrity sha512-tiV/7EqkaYDtVXx+9kS6VTfI9+jzTwlIOKh1gLbAETv0Y5J/u4C5ItLss9XSxgp/EF6OnHCu2zpuN/FLxnwfrQ==
+  dependencies:
+    "@ezuikit/utils-tools" "2.0.3"
+    deepmerge "^4.3.1"
+
+"@ezuikit/control-time-line@^2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-time-line/-/control-time-line-2.0.0-beta.4.tgz#bb0efb5145e2e2148add782614a5e2db76cc3c44"
+  integrity sha512-BwNQo8Kq/qQ3xtEnM6ya0JXstixUORNcUrXS+QTxPyU6+PxTs/YlurgE4uLb0kYuH6ny6ErxaumHVn3sqFq8zw==
+  dependencies:
+    "@ezuikit/utils-i18n" "2.0.0"
+    "@ezuikit/utils-tools" "2.0.3"
+    "@skax/delegate" "4.0.2"
+    "@skax/drag-scroll" "1.1.2"
+    "@skax/picker" "1.1.8"
+    deepmerge "^4.3.1"
+
+"@ezuikit/control-zoom@^1.0.0-beta.3":
+  version "1.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-zoom/-/control-zoom-1.0.0-beta.4.tgz#a3ff1fd43e1a1bb23103a4c263c026348119c423"
+  integrity sha512-MG+weJeYSeh86LyZWFseUSWw9VCkyKFIE0V58Nee1+NCIuctbTd9fBmtAexX8xHEiApHKDwfQmwc+xlUZgTb6Q==
+
+"@ezuikit/player-hls@2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@ezuikit/player-hls/-/player-hls-2.0.0-beta.4.tgz#c70df2868bc7311be0a50aecacc2c559ea74f631"
+  integrity sha512-zeehXCjxNzMNt9BhAweAlyXPT9jxBk2GoQWZccucQuxzrHG96Skj2vTCkJw2Wt+MGc9+NGAJlDwfeV3LXFGgeg==
+  dependencies:
+    "@ezuikit/player-theme" "3.0.2-beta.3"
+    "@ezuikit/utils-collect" "^0.1.1"
+    "@ezuikit/utils-i18n" "2.0.1"
+    "@ezuikit/utils-logger" "2.0.1"
+    "@ezuikit/utils-tools" "2.0.5"
+    "@skax/hls-parse" "0.0.1-beta.9"
+    deepmerge "^4.3.1"
+    eventemitter3 "^5.0.1"
+    hls.js "^1.6.16"
+    ua-parser-js "1.0.37"
+
+"@ezuikit/player-theme@3.0.2-beta.3":
+  version "3.0.2-beta.3"
+  resolved "https://registry.yarnpkg.com/@ezuikit/player-theme/-/player-theme-3.0.2-beta.3.tgz#b42bdca6ec7a964780e3ba8a142f5fb3f5407dc1"
+  integrity sha512-cp/nMQzu3QDkNrmuFM72ftBGvinuvzDotPMR35igGAyDa/Mnm0mp+PErxxPK1jjI3ffyzzrFfdFX09rrIK1fTQ==
+  dependencies:
+    "@ezuikit/control-date-picker" "^2.0.0-beta.4"
+    "@ezuikit/control-ptz" "^1.0.0-beta.5"
+    "@ezuikit/control-time-line" "^2.0.0-beta.4"
+    "@ezuikit/control-zoom" "^1.0.0-beta.3"
     "@ezuikit/utils-i18n" "2.0.1"
     "@ezuikit/utils-logger" "2.0.1"
     "@ezuikit/utils-tools" "2.0.3"
+    "@juggle/resize-observer" "^3.4.0"
+    "@skax/delegate" "4.0.2"
+    "@skax/picker" "1.1.8"
+    deepmerge "^4.3.1"
     eventemitter3 "^5.0.1"
-    hls.js "^1.5.7"
-    lodash-es "^4.17.21"
-    screenfull "^5.2.0"
-    ua-parser-js "1.0.37"
+    screenfull "5.2.0"
 
-"@ezuikit/utils-collect@^0.1.0":
+"@ezuikit/utils-collect@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@ezuikit/utils-collect/-/utils-collect-0.1.1.tgz#b9b49b1a2ef762c1d33b8a154bdd571e9cd965da"
   integrity sha512-BgEOnTtAq8rQRBAKv5rLXbQLGOnfOZ6NS0QTmiviey80JbMJlxrLiqmjL5lxvkm4JtCcXCtSgPA4tskQKN4eDA==
+
+"@ezuikit/utils-i18n@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@ezuikit/utils-i18n/-/utils-i18n-2.0.0.tgz#41dceba7b09043e1a5baffce36ca0e0de36c7cc4"
+  integrity sha512-gMkfdwFTRk3bAkUVWRGPyEsQl4aIImBpQp732aSSHA75LFPi1MmdaB2Xf34OeC+4v+Anpbt75vviCpUrKPMKlQ==
+  dependencies:
+    deepmerge "^4.3.1"
 
 "@ezuikit/utils-i18n@2.0.1":
   version "2.0.1"
@@ -682,6 +745,11 @@
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@ezuikit/utils-tools/-/utils-tools-2.0.3.tgz#11fdf9422288f1355c2378b9d890844168fca6b3"
   integrity sha512-YvUGDU1ikjSc5YjQLh6kQWGBOpqkOczb3HiocWm7FOk9grW6IAGd3RbRu0e+XyWT20nefcEpbIhRwOYsTejjnA==
+
+"@ezuikit/utils-tools@2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@ezuikit/utils-tools/-/utils-tools-2.0.5.tgz#81edb936af448d52e61aa7425d7faa4ec1100bd0"
+  integrity sha512-7SR3kKQdColQ+Rz/PPaLzHi8Yv3RuhFUh3iMymonlO95OJSZBgjaTSX5QNeTnZIi57soNVoHByR4tS/JbMA4Wg==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -758,6 +826,11 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@juggle/resize-observer@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.4.0.tgz#08d6c5e20cf7e4cc02fd181c4b0c225cd31dbb60"
+  integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -770,6 +843,26 @@
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
+
+"@skax/delegate@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@skax/delegate/-/delegate-4.0.2.tgz#c1bdd1e195e414bb56153d697d9e0c431084afcb"
+  integrity sha512-8imP+fGESjlbU4mFhZMEuR3/qmYVtqQjXXzZ/C/imbzKqyaMWYpEDqQXNf6yGHzWHUJhZwn5AWNm645U1GjQsQ==
+
+"@skax/drag-scroll@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@skax/drag-scroll/-/drag-scroll-1.1.2.tgz#1867421bdd90cc86a33f4e1529f50ce44b6aaff8"
+  integrity sha512-dRYjWY6+ix7FCdDLkkEgitO5EcawaHJt1Fu6BXUwKjpikkGnVeMRzrIwfH3jr6FbrhZvZr4StsYG7x5xMHZ3CQ==
+
+"@skax/hls-parse@0.0.1-beta.9":
+  version "0.0.1-beta.9"
+  resolved "https://registry.yarnpkg.com/@skax/hls-parse/-/hls-parse-0.0.1-beta.9.tgz#bff37cebf14831ff52aa59cdc079cbd6962abf5e"
+  integrity sha512-oJOwqoRqk7nCeQjovvpAYyh5inJqbDNLj+7DDTcRITyLDmCo6FMkFxVL5iracUB+W1GrhXf5jISYtlLjGxPI4w==
+
+"@skax/picker@1.1.8":
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/@skax/picker/-/picker-1.1.8.tgz#2104841638afff654285fb6098366e4981f4e89e"
+  integrity sha512-PY8eefUG2KYheTV4VsToL66JDyFWbNrUQcz4sdEUfdFs5A2JWBYL4tNVEIMUq92m03yXaPtkNXh2RcgKO2Czzg==
 
 "@soda/friendly-errors-webpack-plugin@^1.7.1":
   version "1.8.1"
@@ -4015,10 +4108,10 @@ highlight.js@^10.7.1:
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
   integrity sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==
 
-hls.js@^1.5.7:
-  version "1.6.15"
-  resolved "https://registry.yarnpkg.com/hls.js/-/hls.js-1.6.15.tgz#9ce13080d143a9bc9b903fb43f081e335b8321e5"
-  integrity sha512-E3a5VwgXimGHwpRGV+WxRTKeSp2DW5DI5MWv34ulL3t5UNmyJWCQ1KmLEHbYzcfThfXG8amBL+fCYPneGHC4VA==
+hls.js@^1.6.16:
+  version "1.6.16"
+  resolved "https://registry.yarnpkg.com/hls.js/-/hls.js-1.6.16.tgz#e2e7e79b68357cb3f8aa82dec0a36c9c2701f5c0"
+  integrity sha512-VSIRpLfRwlAAdGL4wiTucx2ScRipo0ed1FBatWkyt832jC4CReKstga6yIhYVwGu9LOBjuX9wzmRMeQdBJtzEA==
 
 hmac-drbg@^1.0.1:
   version "1.0.1"
@@ -4946,11 +5039,6 @@ locate-path@^5.0.0:
   integrity sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==
   dependencies:
     p-locate "^4.1.0"
-
-lodash-es@^4.17.21:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
-  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash.debounce@^4.0.8:
   version "4.0.8"
@@ -6868,7 +6956,7 @@ schema-utils@^2.6.5:
     ajv "^6.12.4"
     ajv-keywords "^3.5.2"
 
-screenfull@^5.2.0:
+screenfull@5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/screenfull/-/screenfull-5.2.0.tgz#6533d524d30621fc1283b9692146f3f13a93d1ba"
   integrity sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==

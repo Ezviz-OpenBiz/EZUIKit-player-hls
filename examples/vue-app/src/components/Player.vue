@@ -1,5 +1,7 @@
 <script setup>
+import "@ezuikit/player-hls/dist/style/css.js";
 import { onBeforeUnmount, ref } from 'vue'
+
 import HlsPlayer from '@ezuikit/player-hls';
 
 let player = null
@@ -22,6 +24,8 @@ const init = () => {
   player = new HlsPlayer({
     id: 'container',
     url: playUrl,
+    // decoderType: "soft",
+    // 如果是萤石平台的ll-hls回放地址, 需要提供 accessToken， 为了方便暂停后重新回去新的地址进行播放， 不然会报 Missing accessToken
   })
   // 默认自动播放
   // player.play()

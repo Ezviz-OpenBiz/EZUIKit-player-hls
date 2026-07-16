@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import "@ezuikit/player-hls/dist/style/css.js";
 import HlsPlayer from "@ezuikit/player-hls";
 var player = null;
 
@@ -25,7 +26,7 @@ export default {
   },
   data() {
     return {
-      url: "https://sqhls3.ys7.com:7993/v3/openlive/BF4904736_1_1.m3u8?expire=1777443506&id=967066858175684608&t=860d4eb3c4257345eb1fcf9ab2b590ef37e87defdc73b8e1665da2169ce6ce&ev=101&supportH265=1&vc=3&u=38faa8e5801c4464a6e51f4c328f0c88",
+      url: "https://open.ys7.com/v3/openpb/llhls/BC7799091_1_1.m3u8?begin=20260716000000&end=20260716235959&expire=1784794232&id=997898038200520704&rec=cloud&t=814a7752e1cd06efaa7da5c607971669ba2c92ea11d9a695c428f017e9f83700&ev=101&ownerId=openteam&streamer=alicloud.ys7.com:32723&VideoType=2&StorageVersion=2&supportH265=1",
     };
   },
   mounted() {
@@ -43,6 +44,8 @@ export default {
         loggerOptions: {
           level: "WARN",
         },
+        // decoderType: "soft",
+        // 如果是萤石平台的ll-hls回放地址, 需要提供 accessToken， 为了方便暂停后重新回去新的地址进行播放， 不然会报 Missing accessToken
       });
 
       player.event.on("videoInfo", (info) => {

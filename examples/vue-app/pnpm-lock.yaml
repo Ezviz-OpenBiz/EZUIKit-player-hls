@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@ezuikit/player-hls':
-    specifier: 0.1.4
-    version: 0.1.4
+    specifier: 2.0.0-beta.4
+    version: 2.0.0-beta.4
   vue:
     specifier: ^3.3.4
     version: 3.4.35
@@ -295,22 +295,79 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@ezuikit/player-hls@0.1.4:
-    resolution: {integrity: sha512-u7rVMZLsYiWyrnlVpTXEK4+gyRwJ2a+CZ5CknCk71H9Ds4xDNyCdu3SvWkXjl0n4JVgdy7cdLwu24CFdpj2TOw==}
+  /@ezuikit/control-date-picker@2.0.0-beta.4:
+    resolution: {integrity: sha512-0+uN3s8W78uSZSvWXbmFUY5kmK8I/94uWqBm9cSRlG7OtSvLCrySVXj/fbYXMrDWpXx6okHfxPZRqke6GbpK9Q==}
     dependencies:
-      '@ezuikit/utils-collect': 0.1.0
+      '@ezuikit/utils-i18n': 2.0.0
+      '@ezuikit/utils-tools': 2.0.3
+      '@skax/delegate': 4.0.2
+      '@skax/picker': 1.1.8
+      deepmerge: 4.3.1
+    dev: false
+
+  /@ezuikit/control-ptz@1.0.0-beta.5:
+    resolution: {integrity: sha512-tiV/7EqkaYDtVXx+9kS6VTfI9+jzTwlIOKh1gLbAETv0Y5J/u4C5ItLss9XSxgp/EF6OnHCu2zpuN/FLxnwfrQ==}
+    dependencies:
+      '@ezuikit/utils-tools': 2.0.3
+      deepmerge: 4.3.1
+    dev: false
+
+  /@ezuikit/control-time-line@2.0.0-beta.4:
+    resolution: {integrity: sha512-BwNQo8Kq/qQ3xtEnM6ya0JXstixUORNcUrXS+QTxPyU6+PxTs/YlurgE4uLb0kYuH6ny6ErxaumHVn3sqFq8zw==}
+    dependencies:
+      '@ezuikit/utils-i18n': 2.0.0
+      '@ezuikit/utils-tools': 2.0.3
+      '@skax/delegate': 4.0.2
+      '@skax/drag-scroll': 1.1.2
+      '@skax/picker': 1.1.8
+      deepmerge: 4.3.1
+    dev: false
+
+  /@ezuikit/control-zoom@1.0.0-beta.4:
+    resolution: {integrity: sha512-MG+weJeYSeh86LyZWFseUSWw9VCkyKFIE0V58Nee1+NCIuctbTd9fBmtAexX8xHEiApHKDwfQmwc+xlUZgTb6Q==}
+    dev: false
+
+  /@ezuikit/player-hls@2.0.0-beta.4:
+    resolution: {integrity: sha512-zeehXCjxNzMNt9BhAweAlyXPT9jxBk2GoQWZccucQuxzrHG96Skj2vTCkJw2Wt+MGc9+NGAJlDwfeV3LXFGgeg==}
+    dependencies:
+      '@ezuikit/player-theme': 3.0.2-beta.3
+      '@ezuikit/utils-collect': 0.1.1
       '@ezuikit/utils-i18n': 2.0.1
       '@ezuikit/utils-logger': 2.0.1
-      '@ezuikit/utils-tools': 2.0.3
+      '@ezuikit/utils-tools': 2.0.5
+      '@skax/hls-parse': 0.0.1-beta.9
+      deepmerge: 4.3.1
       eventemitter3: 5.0.1
-      hls.js: 1.5.13
-      lodash-es: 4.17.21
-      screenfull: 5.2.0
+      hls.js: 1.6.16
       ua-parser-js: 1.0.37
     dev: false
 
-  /@ezuikit/utils-collect@0.1.0:
-    resolution: {integrity: sha512-85lWlB/VCaooPPkCK3nEB4F3UKgO+HbmoPEq4U1tH/ObVP7IJ7eURrFUmQT1CKsqjH5xz5g4DgZzHWgYrwGcCQ==}
+  /@ezuikit/player-theme@3.0.2-beta.3:
+    resolution: {integrity: sha512-cp/nMQzu3QDkNrmuFM72ftBGvinuvzDotPMR35igGAyDa/Mnm0mp+PErxxPK1jjI3ffyzzrFfdFX09rrIK1fTQ==}
+    dependencies:
+      '@ezuikit/control-date-picker': 2.0.0-beta.4
+      '@ezuikit/control-ptz': 1.0.0-beta.5
+      '@ezuikit/control-time-line': 2.0.0-beta.4
+      '@ezuikit/control-zoom': 1.0.0-beta.4
+      '@ezuikit/utils-i18n': 2.0.1
+      '@ezuikit/utils-logger': 2.0.1
+      '@ezuikit/utils-tools': 2.0.3
+      '@juggle/resize-observer': 3.4.0
+      '@skax/delegate': 4.0.2
+      '@skax/picker': 1.1.8
+      deepmerge: 4.3.1
+      eventemitter3: 5.0.1
+      screenfull: 5.2.0
+    dev: false
+
+  /@ezuikit/utils-collect@0.1.1:
+    resolution: {integrity: sha512-BgEOnTtAq8rQRBAKv5rLXbQLGOnfOZ6NS0QTmiviey80JbMJlxrLiqmjL5lxvkm4JtCcXCtSgPA4tskQKN4eDA==}
+    dev: false
+
+  /@ezuikit/utils-i18n@2.0.0:
+    resolution: {integrity: sha512-gMkfdwFTRk3bAkUVWRGPyEsQl4aIImBpQp732aSSHA75LFPi1MmdaB2Xf34OeC+4v+Anpbt75vviCpUrKPMKlQ==}
+    dependencies:
+      deepmerge: 4.3.1
     dev: false
 
   /@ezuikit/utils-i18n@2.0.1:
@@ -325,6 +382,10 @@ packages:
 
   /@ezuikit/utils-tools@2.0.3:
     resolution: {integrity: sha512-YvUGDU1ikjSc5YjQLh6kQWGBOpqkOczb3HiocWm7FOk9grW6IAGd3RbRu0e+XyWT20nefcEpbIhRwOYsTejjnA==}
+    dev: false
+
+  /@ezuikit/utils-tools@2.0.5:
+    resolution: {integrity: sha512-7SR3kKQdColQ+Rz/PPaLzHi8Yv3RuhFUh3iMymonlO95OJSZBgjaTSX5QNeTnZIi57soNVoHByR4tS/JbMA4Wg==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.14:
@@ -351,6 +412,10 @@ packages:
 
   /@jridgewell/sourcemap-codec@1.5.0:
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
+
+  /@juggle/resize-observer@3.4.0:
+    resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
+    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -381,6 +446,22 @@ packages:
   /@rushstack/eslint-patch@1.10.4:
     resolution: {integrity: sha512-WJgX9nzTqknM393q1QJDJmoW28kUfEnybeTfVNcNAPnIx210RXm2DiXiHzfNPJNIUUb1tJnz/l4QGtJ30PgWmA==}
     dev: true
+
+  /@skax/delegate@4.0.2:
+    resolution: {integrity: sha512-8imP+fGESjlbU4mFhZMEuR3/qmYVtqQjXXzZ/C/imbzKqyaMWYpEDqQXNf6yGHzWHUJhZwn5AWNm645U1GjQsQ==}
+    dev: false
+
+  /@skax/drag-scroll@1.1.2:
+    resolution: {integrity: sha512-dRYjWY6+ix7FCdDLkkEgitO5EcawaHJt1Fu6BXUwKjpikkGnVeMRzrIwfH3jr6FbrhZvZr4StsYG7x5xMHZ3CQ==}
+    dev: false
+
+  /@skax/hls-parse@0.0.1-beta.9:
+    resolution: {integrity: sha512-oJOwqoRqk7nCeQjovvpAYyh5inJqbDNLj+7DDTcRITyLDmCo6FMkFxVL5iracUB+W1GrhXf5jISYtlLjGxPI4w==}
+    dev: false
+
+  /@skax/picker@1.1.8:
+    resolution: {integrity: sha512-PY8eefUG2KYheTV4VsToL66JDyFWbNrUQcz4sdEUfdFs5A2JWBYL4tNVEIMUq92m03yXaPtkNXh2RcgKO2Czzg==}
+    dev: false
 
   /@ungap/structured-clone@1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
@@ -889,8 +970,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /hls.js@1.5.13:
-    resolution: {integrity: sha512-xRgKo84nsC7clEvSfIdgn/Tc0NOT+d7vdiL/wvkLO+0k0juc26NRBPPG1SfB8pd5bHXIjMW/F5VM8VYYkOYYdw==}
+  /hls.js@1.6.16:
+    resolution: {integrity: sha512-VSIRpLfRwlAAdGL4wiTucx2ScRipo0ed1FBatWkyt832jC4CReKstga6yIhYVwGu9LOBjuX9wzmRMeQdBJtzEA==}
     dev: false
 
   /ignore@5.3.1:
@@ -983,10 +1064,6 @@ packages:
     dependencies:
       p-locate: 5.0.0
     dev: true
-
-  /lodash-es@4.17.21:
-    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-    dev: false
 
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
