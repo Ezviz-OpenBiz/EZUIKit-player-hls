@@ -20,6 +20,8 @@
 
       #container {
         background: #000;
+        width: 600px;
+        height: 400px;
       }
 
       .input {
@@ -88,7 +90,9 @@
           id: 'container',
           url: $playHref.value,
           width: 600,
-          height: 400
+          height: 400,
+          // decoderType: "soft",
+          // 如果是萤石平台的ll-hls回放地址, 需要提供 accessToken， 为了方便暂停后重新回去新的地址进行播放， 不然会报 Missing accessToken
         });
 
         player.on("error", (msg) => {
