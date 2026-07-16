@@ -84,7 +84,7 @@ declare class HLSPlayer extends Theme {
         SEGMENT_ENDED: string;
         RATE_CHANGE: string;
         TIME_UPDATE: string;
-        VOLUME_CHANGE: string; /** WebAssembly completed loading identity */
+        VOLUME_CHANGE: string;
         SEEKING: string;
         SEEKED: string;
         loading: "loading";
