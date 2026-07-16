@@ -20,7 +20,7 @@ jobs:
 
       - name: Check file versions
         run: |
-          files="dist/index.js dist/index.esm.js dist/index.umd.js package.json"
+          files="dist/index.js dist/index.esm.js dist/index.umd.js dist/decoder.worker.js package.json"
 
           version=""
           inconsistent=false
