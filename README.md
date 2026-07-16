@@ -36,6 +36,9 @@ const player = new HlsPlayer({
   id: "app",
   url: "https://open.ys7.com/v3/openlive/E71992743_1_1.m3u8",
   staticPath: "/", // decoder静态资源文件夹 默认根目录
+  // decoderType: "soft", // @sine 2.x
+  // 如果是萤石平台的ll-hls回放地址, 需要提供 accessToken， 为了方便暂停后重新回去新的地址进行播放， 不然会报 Missing accessToken
+  // accessToken: "" // @sine 2.x
 });
 
 // 不会立即生效
