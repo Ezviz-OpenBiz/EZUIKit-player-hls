@@ -1,42 +1,74 @@
 import { ThemeOptions, Theme } from '@ezuikit/player-theme';
 export { LoggerOptions } from '@ezuikit/utils-logger';
 
+/**
+ * 引擎统一接口。
+ *
+ * 软解（{@link SoftPlayer}）与硬解（{@link HardHlsPlayer}）两种引擎都实现该契约，
+ * 上层 {@link HLSPlayer} 只依赖此接口，从而对具体解码实现无感、可随时切换。
+ * 新增对外能力时应同时在两种引擎中提供实现，保证行为一致。
+ */
 interface IEnginePlayer {
+    /** 是否正在播放 */
     playing: boolean;
+    /** 音量 [0.0 ~ 1.0] */
     volume: number;
+    /** 时长（秒）；直播为实时时长 */
     duration: number;
+    /** 当前播放位置（秒） */
     currentTime: number;
+    /** 播放；传入 url 表示切换到新地址并重新开始 */
     play: (url?: string) => Promise<any>;
+    /** 暂停 */
     pause: () => void;
+    /** 设置静音 */
     setMuted: (muted: boolean) => void;
+    /** 设置音量 [0.0 ~ 1.0] */
     setVolume: (volume: number) => void;
+    /** 销毁引擎并释放资源（解码器 / MSE / WebGL / 音频上下文等） */
     destroy: () => void;
+    /** 截图，返回值随 type 而定（base64 字符串 / Blob / 下载后返回 Blob） */
     screenshot: (filename?: string, format?: string, quality?: number, type?: 'download' | 'base64' | 'blob') => Promise<string | Blob | undefined>;
     [key: string]: any;
 }
 
+/**
+ * HLSPlayer 构造参数。
+ *
+ * 继承 {@link ThemeOptions}（容器 container、width、height、muted、scaleMode、
+ * language、volumeOptions、dblClickFullscreen、themeData、template 等 UI 相关配置），
+ * 此处仅声明 HLS 播放相关的扩展字段。默认值见 `constant/index.ts` 的
+ * `_$DEFAULT_HLS_OPTIONS$_`。
+ */
 interface HlsOptions extends ThemeOptions {
-    /** 播放地址 */
+    /** 播放地址（.m3u8），必填 */
     url: string;
-    /** 萤石接口的访问令牌 */
+    /** 萤石开放平台接口的访问令牌，回放 seek（按时间）时必填 */
     accessToken?: string;
-    /** 萤石接口域名 */
+    /** 萤石开放平台接口域名，默认 https://open.ys7.com */
     domain?: string;
-    /** dom 容器id（兼容旧用法，优先使用 container） */
+    /** dom 容器 id（兼容旧用法，优先使用 container） */
     id?: string;
-    /** 出错尝试连接次数 默认 20 */
+    /** 出错重试次数，默认 5 */
     maxRetries?: number;
-    /** 是否是直播 默认 false, 当为 true 时 每次调用 play 都会重新加载播放地址 */
+    /** 是否是直播，默认 false；为 true 时每次调用 play 都会重新加载播放地址 */
     isLive?: boolean;
-    /** 静态资源路径 */
+    /** decoder 静态资源（decoder.worker.js / decoder.wasm）所在目录，仅软解需要，默认 "" */
     staticPath?: string;
-    /** 音量大小默认 0 */
+    /** 音量大小 [0.0 ~ 1.0]，默认 0.8 */
     volume?: number;
-    /** 自动播放 */
+    /** 自动播放，默认 true */
     autoPlay: boolean;
-    /** 禁用数据采集 */
+    /**
+     * 解码方式，默认 "auto"。
+     * - "auto"：硬解优先，遇到浏览器无法解码（如 H.265）时自动降级为软解
+     * - "hard"：强制硬解（hls.js + MSE）
+     * - "soft"：强制软解（WASM + WebGL）
+     */
+    decoderType?: "auto" | "hard" | "soft";
+    /** 禁用数据采集，默认 false */
     disableCollect?: boolean;
-    /** 日志配置 */
+    /** 日志配置，默认 { name: "HLS", level: "INFO", showTime: true } */
     loggerOptions?: any;
     /**
      * 是否开启低延迟模式，默认 false，开启后会启用一些优化措施来降低直播的延迟，例如减少缓冲区大小、启用快速启动等，但可能会增加卡顿的风险，建议在网络状况较好且对延迟要求较高的场景下开启。
@@ -61,7 +93,29 @@ declare const SCREENSHOT_TYPE: {
 };
 
 /**
- * hls 播放器，继承 Theme 提供 UI 和交互能力
+ * HLS 播放器对外主类，是 SDK 的唯一入口。
+ *
+ * 职责：
+ * - 继承 `Theme`（@ezuikit/player-theme）获得 UI 皮肤、控件、全屏、缩放等交互能力，
+ *   `Theme` 本身即 EventEmitter，故实例可直接 `on`/`emit` 事件。
+ * - 通过 {@link createPlayer} 创建并持有底层引擎（软解 / 硬解），自身只面向
+ *   {@link IEnginePlayer} 编程，对解码实现无感。
+ * - 负责 `"auto"` 解码的自动降级：先硬解，监听到 `MEDIA_ERROR` 后切换软解（见 {@link _createPlayer}）。
+ * - 处理萤石开放平台特性：强制追加 `&vc=3`、LL-HLS 回放地址获取（{@link EzvizFetcher}）。
+ * - 打点采集（{@link Collect}）与对外 API（play/pause/seek/screenshot/destroy 等）。
+ *
+ * @example
+ * ```ts
+ * import "@ezuikit/player-hls/dist/style/css.js"; // @sine 2.x
+ * import HLSPlayer from "@ezuikit/player-hls";
+ * const player = new HLSPlayer({
+ *  id: "app",
+ *  url: "xxx.m3u8",
+ *  staticPath: "/"
+ *  accessToken: "xxxx", // 非必填, 如果是萤石 ll-hls 回放流需要 @sine 2.x
+ * });
+ * player.play();
+ * ```
  */
 declare class HLSPlayer extends Theme {
     static HLSEVENTS: {
@@ -274,8 +328,26 @@ declare class HLSPlayer extends Theme {
         url?: string;
         type?: string;
     }>): boolean;
+    /**
+     * 创建底层引擎并接线事件。
+     *
+     * 选择策略：`decoderType === "soft"` 直接软解，否则（含 "auto"/"hard"）先硬解。
+     * 当解码方式不是强制软解时，注册一次性 `MEDIA_ERROR` 监听：一旦硬解因浏览器
+     * 无法解码（常见于 H.265）而报错，就销毁硬解引擎并重建为软解引擎，实现
+     * “auto” 的自动降级。强制 "hard" 时同样会降级——如需严格硬解可自行拦截该事件。
+     *
+     * @param options 引擎参数（已注入 container=视频/画布挂载点、event=事件总线、logger）
+     */
     _createPlayer(options: any): void;
 }
+
+/**
+ * @packageDocumentation
+ * `@ezuikit/player-hls` 的包入口。
+ *
+ * 默认导出 {@link HLSPlayer}（对外主类），并导出配置类型 {@link HlsOptions} 与
+ * {@link LoggerOptions}，供 TypeScript 使用者进行类型标注。
+ */
 
 export { HLSPlayer as default };
 export type { HlsOptions };
