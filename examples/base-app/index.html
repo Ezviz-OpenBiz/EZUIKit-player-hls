@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ezuikit/player-hls · UMD 示例</title>
+    <!-- 主题样式（@2.x）：文件来源 node_modules/@ezuikit/player-hls/dist/style/css.css -->
     <link href="./style/css.css" rel="stylesheet" />
+    <!-- 播放器 UMD 包：文件来源 node_modules/@ezuikit/player-hls/dist/index.umd.js，全局变量名为 HlsPlayer -->
     <script src="./index.umd.js"></script>
     <style>
       * {
@@ -12,151 +15,364 @@
         box-sizing: border-box;
       }
 
+      body {
+        font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", sans-serif;
+        background: #f5f6f8;
+        color: #1f2329;
+      }
+
       .root {
         display: flex;
-        place-content: center;
-        margin-top: 3rem;
+        gap: 16px;
+        max-width: 1100px;
+        margin: 24px auto;
+        padding: 0 16px;
+        flex-wrap: wrap;
+      }
+
+      .container-shell {
+        flex: 1 1 620px;
       }
 
       #container {
         background: #000;
         width: 600px;
+        max-width: 100%;
         height: 400px;
       }
 
-      .input {
+      .row {
         display: flex;
-        margin-top: 10px;
-        color: white;
-        place-content: stretch;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        margin-top: 12px;
       }
 
-      .input input {
-        flex: auto;
+      .row label {
+        font-size: 13px;
+        color: #4e5969;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        padding: 6px 8px;
+        border: 1px solid #c9cdd4;
+        border-radius: 4px;
+        font-size: 13px;
+      }
+
+      #playUrl {
+        flex: 1 1 420px;
+        min-width: 260px;
+      }
+
+      select {
+        padding: 6px 8px;
+        border: 1px solid #c9cdd4;
+        border-radius: 4px;
+        font-size: 13px;
+        background: #fff;
       }
 
       button {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding: 6px 12px;
+        border: 1px solid #165dff;
+        background: #165dff;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      button.secondary {
+        background: #fff;
+        color: #165dff;
+      }
+
+      button:hover {
+        opacity: 0.9;
+      }
+
+      .panel {
+        flex: 1 1 380px;
+        min-width: 300px;
+      }
+
+      .panel h3 {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      #log {
+        height: 460px;
+        overflow: auto;
+        background: #0d1117;
+        color: #c9d1d9;
+        border-radius: 6px;
+        padding: 10px;
+        font-family: Consolas, Monaco, monospace;
+        font-size: 12px;
+        line-height: 1.6;
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
+
+      #log .evt {
+        color: #7ee787;
+      }
+      #log .err {
+        color: #ff7b72;
+      }
+      #log .time {
+        color: #8b949e;
       }
     </style>
   </head>
 
-  <body class="page">
+  <body>
     <div class="root">
       <div class="container-shell">
         <div id="container"></div>
-        <div class="input">
-          <input autocomplete="on" id="playUrl" value="" />
-          <button id="init">初始化</button>
+
+        <div class="row">
+          <input
+            type="text"
+            id="playUrl"
+            autocomplete="on"
+            placeholder="输入 .m3u8 播放地址"
+            value="https://open.ys7.com/v3/openlive/E71992743_1_1.m3u8"
+          />
+          <label>解码</label>
+          <select id="decoderType" title="decoderType">
+            <option value="auto">auto（硬解优先，H.265 自动降级软解）</option>
+            <option value="hard">hard（hls.js 硬解）</option>
+            <option value="soft">soft（WASM 软解）</option>
+          </select>
+          <button id="init">初始化并播放</button>
         </div>
-        <div style="display: inline-flex">
+
+        <div class="row">
           <button id="play">播放</button>
-          <button id="pause">暂停</button>
-          <button id="fullscreen">全屏</button>
-          <button id="destroy">销毁</button>
-          <div title="只取小数点后两位，不进位">
-            <label>音量：</label>
-            <input
-              placeholder="0~1"
-              id="setVolume"
-              type="number"
-              step="0.01"
-              style="width: 60px"
-            />
-          </div>
-          <button id="getVersion">获取版本</button>
+          <button id="pause" class="secondary">暂停</button>
+          <button id="fullscreen" class="secondary">全屏</button>
+          <button id="screenshot" class="secondary">截图</button>
+          <button id="destroy" class="secondary">销毁</button>
+          <button id="getVersion" class="secondary">版本</button>
         </div>
+
+        <div class="row">
+          <label>seek</label>
+          <input
+            type="text"
+            id="seekValue"
+            style="width: 180px"
+            placeholder="点播秒数 或 回放 YYYYMMDDHHmmss"
+          />
+          <button id="seek" class="secondary">跳转</button>
+        </div>
+
+        <div class="row">
+          <label>填充</label>
+          <select id="scaleMode" title="scaleMode">
+            <option value="1">1 等比最大边</option>
+            <option value="0">0 完全填充</option>
+            <option value="2">2 等比最小边</option>
+          </select>
+          <label>音量</label>
+          <input
+            type="number"
+            id="setVolume"
+            min="0"
+            max="1"
+            step="0.01"
+            style="width: 70px"
+            placeholder="0~1"
+            title="只取小数点后两位，不进位"
+          />
+          <label><input type="checkbox" id="muted" checked /> 静音</label>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>事件日志（player.on）</h3>
+        <div id="log"></div>
       </div>
     </div>
 
     <script>
-      var $init = document.getElementById("init");
-      var $play = document.getElementById("play");
-      var $pause = document.getElementById("pause");
-      var $fullscreen = document.getElementById("fullscreen");
-      var $playHref = document.getElementById("playUrl");
-      var $destroy = document.getElementById("destroy");
-      var $getVersion = document.getElementById("getVersion");
+      var $ = function (id) {
+        return document.getElementById(id);
+      };
 
-      var $setVolume = document.getElementById("setVolume");
-      var $setRotate = document.getElementById("setRotate");
-      var $setScaleMode = document.getElementById("setScaleMode");
+      var $init = $("init");
+      var $play = $("play");
+      var $pause = $("pause");
+      var $fullscreen = $("fullscreen");
+      var $screenshot = $("screenshot");
+      var $destroy = $("destroy");
+      var $getVersion = $("getVersion");
+      var $seek = $("seek");
+      var $seekValue = $("seekValue");
+      var $scaleMode = $("scaleMode");
+      var $setVolume = $("setVolume");
+      var $muted = $("muted");
+      var $playUrl = $("playUrl");
+      var $decoderType = $("decoderType");
+      var $log = $("log");
 
       var player = null;
 
+      function log(name, payload, isError) {
+        var time = new Date().toLocaleTimeString();
+        var line = document.createElement("div");
+        line.innerHTML =
+          '<span class="time">[' +
+          time +
+          ']</span> <span class="' +
+          (isError ? "err" : "evt") +
+          '">' +
+          name +
+          "</span>";
+        if (payload !== undefined) {
+          line.innerHTML += " " + safeStringify(payload);
+        }
+        $log.appendChild(line);
+        $log.scrollTop = $log.scrollHeight;
+      }
+
+      function safeStringify(v) {
+        try {
+          if (typeof v === "object") return JSON.stringify(v);
+          return String(v);
+        } catch (e) {
+          return String(v);
+        }
+      }
+
       function create() {
+        // decoder 静态资源（decoder.wasm / decoder.worker.js）与本页面同目录，
+        // 软解（或 auto 降级软解，如 H.265）时必须通过 staticPath 指定其所在目录。
         player = new HlsPlayer({
-          id: 'container',
-          url: $playHref.value,
+          id: "container",
+          url: $playUrl.value,
           width: 600,
           height: 400,
-          // decoderType: "soft",
-          // 如果是萤石平台的ll-hls回放地址, 需要提供 accessToken， 为了方便暂停后重新回去新的地址进行播放， 不然会报 Missing accessToken
+          staticPath: "./",
+          decoderType: $decoderType.value,
+          autoPlay: true,
+          muted: $muted.checked,
+          scaleMode: Number($scaleMode.value),
+          // 如果是萤石平台的 ll-hls 回放地址，需要提供 accessToken，
+          // 否则按时间 seek 会报 Missing accessToken
+          // accessToken: "xxxx",
         });
 
-        player.on("error", (msg) => {
-          console.error(msg);
+        // 事件监听：事件名参考 README 与 HlsPlayer.HLSEVENTS
+        player.on("initSuccess", function (info) {
+          log("initSuccess", info);
         });
-        // v0.1.4
-        player.event.on("videoInfo", (info) => {
-          console.log("videoInfo", info);
+        player.on("videoInfo", function (info) {
+          log("videoInfo", info);
+        });
+        player.on("audioInfo", function (info) {
+          log("audioInfo", info);
+        });
+        player.on("durationchange", function (d) {
+          log("durationchange", d);
+        });
+        player.on("ended", function () {
+          log("ended");
+        });
+        player.on("error", function (e) {
+          log("error", e, true);
+        });
+        player.on("media_error", function () {
+          log("media_error（触发 auto 降级软解）", undefined, true);
+        });
+        player.on("network_error", function () {
+          log("network_error", undefined, true);
         });
       }
 
-      $init.addEventListener(
-        "click",
-        function () {
-          var href = $playHref.value;
+      $init.addEventListener("click", function () {
+        if (player) {
+          player.destroy();
+          player = null;
+        }
+        if ($playUrl.value) {
+          create();
+          // autoPlay:true 时会在资源就绪后自动播放，这里显式调用一次也可
+          player.play();
+        } else {
+          log("请先输入播放地址", undefined, true);
+        }
+      });
 
-          if (player) {
-            player.destroy();
-            player = null;
-          }
-
-          if (href) {
-            create();
-            player.play();
-          }
-        },
-        false
-      );
-
-      $play.addEventListener(
-        "click",
-        function () {
-          if (player) {
-            player.play();
-          }
-        },
-        false
-      );
+      $play.addEventListener("click", function () {
+        if (player) player.play();
+      });
 
       $pause.addEventListener("click", function () {
         if (player) player.pause();
       });
-      
+
       $fullscreen.addEventListener("click", function () {
         if (player) player.fullscreen();
+      });
+
+      $screenshot.addEventListener("click", function () {
+        if (!player) return;
+        // 默认下载 png；也可传 ("snap", "jpeg", 0.7, "base64") 返回 base64
+        player.screenshot().then(function (res) {
+          log("screenshot", res ? "已生成（Blob/已下载）" : "截图失败");
+        });
       });
 
       $destroy.addEventListener("click", function () {
         if (player) {
           player.destroy();
           player = null;
+          log("destroy");
         }
       });
 
-      $getVersion.addEventListener("click", () => {
-        if (player) {
-          console.log(player.getVersion());
-        }
+      $getVersion.addEventListener("click", function () {
+        // 无实例时也可用静态属性 HlsPlayer.version
+        log("version", player ? player.getVersion() : HlsPlayer.version);
       });
 
-      $setVolume.addEventListener("blur", (e) => {
-        if (player) {
-          player.setVolume(e.target.value);
+      $seek.addEventListener("click", function () {
+        if (!player) return;
+        var raw = ($seekValue.value || "").trim();
+        if (!raw) return;
+        // 点播传秒数（number）；萤石回放传时间字符串 YYYYMMDDHHmmss（14 位）
+        var value = /^\d+$/.test(raw) && raw.length !== 14 ? Number(raw) : raw;
+        Promise.resolve(player.seek(value)).then(function (ok) {
+          log("seek → " + value, ok);
+        });
+      });
+
+      $scaleMode.addEventListener("change", function (e) {
+        if (player) player.setScaleMode(Number(e.target.value));
+      });
+
+      $setVolume.addEventListener("blur", function (e) {
+        if (!player) return;
+        var value = (e.target.value || "").trim();
+        if (value === "") return;
+        value = Number(value);
+        if (Number.isNaN(value) || value < 0 || value > 1) {
+          log("音量取值范围 [0, 1]", undefined, true);
+          return;
         }
+        // 只取小数点后两位，不进位
+        value = Math.floor(value * 100) / 100;
+        player.setVolume(value);
+      });
+
+      $muted.addEventListener("change", function (e) {
+        if (player) player.muted = e.target.checked;
       });
     </script>
   </body>

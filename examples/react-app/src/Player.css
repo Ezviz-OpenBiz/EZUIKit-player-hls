@@ -1,5 +1,103 @@
+.player-demo {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+  text-align: left;
+}
+
+.player-main {
+  flex: 1 1 620px;
+}
+
 #player-container {
-    height: 600px;
-    height: 400px;
-    background-color: #000;
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+  background-color: #000;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.row label {
+  font-size: 13px;
+  color: #4e5969;
+}
+
+.player-demo input,
+.player-demo select {
+  padding: 6px 8px;
+  border: 1px solid #c9cdd4;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.url-input {
+  flex: 1 1 360px;
+  min-width: 240px;
+}
+
+.seek-input {
+  width: 220px;
+}
+
+.volume-input {
+  width: 70px;
+}
+
+.player-demo button {
+  padding: 6px 12px;
+  border: 1px solid #165dff;
+  background: #165dff;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.player-demo button:hover {
+  opacity: 0.9;
+}
+
+.player-panel {
+  flex: 1 1 360px;
+  min-width: 300px;
+}
+
+.player-panel h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.log {
+  height: 460px;
+  overflow: auto;
+  background: #0d1117;
+  border-radius: 6px;
+  padding: 10px;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.log-time {
+  color: #8b949e;
+}
+
+.log-evt {
+  color: #7ee787;
+}
+
+.log-err {
+  color: #ff7b72;
 }

@@ -682,10 +682,10 @@
   resolved "https://registry.yarnpkg.com/@ezuikit/control-zoom/-/control-zoom-1.0.0-beta.4.tgz#a3ff1fd43e1a1bb23103a4c263c026348119c423"
   integrity sha512-MG+weJeYSeh86LyZWFseUSWw9VCkyKFIE0V58Nee1+NCIuctbTd9fBmtAexX8xHEiApHKDwfQmwc+xlUZgTb6Q==
 
-"@ezuikit/player-hls@2.0.0-beta.4":
-  version "2.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@ezuikit/player-hls/-/player-hls-2.0.0-beta.4.tgz#c70df2868bc7311be0a50aecacc2c559ea74f631"
-  integrity sha512-zeehXCjxNzMNt9BhAweAlyXPT9jxBk2GoQWZccucQuxzrHG96Skj2vTCkJw2Wt+MGc9+NGAJlDwfeV3LXFGgeg==
+"@ezuikit/player-hls@2.0.0-beta.7":
+  version "2.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@ezuikit/player-hls/-/player-hls-2.0.0-beta.7.tgz#a5fa0496d75da6fd70a8493a99161121855533ae"
+  integrity sha512-Q/vSrxAoSt/aCMNTkPIq/fBp+ItokMxnQZX41rlJ/uzV9Eh3J59lpGp95ev8qfUBISGy+sHuMURamhCs43WaMA==
   dependencies:
     "@ezuikit/player-theme" "3.0.2-beta.3"
     "@ezuikit/utils-collect" "^0.1.1"
