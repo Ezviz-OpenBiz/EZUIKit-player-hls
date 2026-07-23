@@ -79,6 +79,11 @@ interface HlsOptions extends ThemeOptions {
     /** 是否追帧 */
     enableFrameChasing?: boolean;
     /**
+     * 软解拉流请求的 fetch 配置（标准 `RequestInit`，如 headers / credentials / mode）。
+     * 仅软解引擎生效，会与默认值 `{ mode: "cors", credentials: "omit", cache: "no-store" }` 合并。
+     */
+    fetchOptions?: RequestInit;
+    /**
      * 萤石开放平台播放地址， 默认 true, 当为 true 时 每次调用 play 都会重新加载播放地址
      * 为了给播放地址上强制追加 &vc=3，说明播放器客户端支持 [h264, h265]
      */

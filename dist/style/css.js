@@ -1,7 +1,7 @@
 /*
- * DecoderWorker.js v2.0.0
- * Copyright (c) 2026-7-23 Ezviz-OpenBiz
- *
- */
+* DecoderWorker.js v2.0.1-beta.1
+* Copyright (c) 2026-7-24 Ezviz-OpenBiz
+* 
+*/
 "use strict";
 require("./css.css");
