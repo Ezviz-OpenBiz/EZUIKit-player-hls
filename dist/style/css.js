@@ -1,5 +1,5 @@
 /*
-* DecoderWorker.js v2.1.0
+* DecoderWorker.js v2.1.0-beta.1
 * Copyright (c) 2026-11-27 15:33:27 Ezviz-OpenBiz
 * 
 */
