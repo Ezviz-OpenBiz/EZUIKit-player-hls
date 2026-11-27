@@ -1,3 +1,9 @@
+## v2.0.1
+
+### Fixed
+
+- Fixed bug
+
 ## v2.0.0
 
 ### Feat
