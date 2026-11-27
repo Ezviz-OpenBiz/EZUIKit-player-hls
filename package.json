@@ -1,6 +1,6 @@
 {
   "name": "@ezuikit/player-hls",
-  "version": "2.0.1",
+  "version": "2.1.0-beta.1",
   "description": "hls播放器",
   "main": "dist/index.js",
   "umd": "dist/index.umd.js",
@@ -22,9 +22,9 @@
   "author": "Ezviz-OpenBiz",
   "dependencies": {
     "@ezuikit/utils-i18n": "2.0.1",
-    "@ezuikit/utils-logger": "2.0.1",
-    "@ezuikit/utils-tools": "2.0.5",
-    "@ezuikit/player-theme": "3.0.2-beta.3",
+    "@ezuikit/utils-logger": "2.1.0",
+    "@ezuikit/utils-tools": "^2.0.11",
+    "@ezuikit/player-theme": "3.2.0-beta.9",
     "eventemitter3": "^5.0.1",
     "hls.js": "^1.6.16",
     "deepmerge": "^4.3.1",

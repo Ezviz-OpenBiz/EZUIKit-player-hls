@@ -1,159 +1,231 @@
-lockfileVersion: '6.0'
+lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@ezuikit/player-theme':
-    specifier: 3.0.2-beta.3
-    version: 3.0.2-beta.3
-  '@ezuikit/utils-collect':
-    specifier: ^0.1.1
-    version: 0.1.1
-  '@ezuikit/utils-i18n':
-    specifier: 2.0.1
-    version: 2.0.1
-  '@ezuikit/utils-logger':
-    specifier: 2.0.1
-    version: 2.0.1
-  '@ezuikit/utils-tools':
-    specifier: 2.0.5
-    version: 2.0.5
-  '@skax/hls-parse':
-    specifier: 0.0.1-beta.9
-    version: 0.0.1-beta.9
-  deepmerge:
-    specifier: ^4.3.1
-    version: 4.3.1
-  eventemitter3:
-    specifier: ^5.0.1
-    version: 5.0.1
-  hls.js:
-    specifier: ^1.6.16
-    version: 1.6.16
-  ua-parser-js:
-    specifier: 1.0.37
-    version: 1.0.37
+importers:
+
+  .:
+    dependencies:
+      '@ezuikit/player-theme':
+        specifier: 3.2.0-beta.9
+        version: 3.2.0-beta.9
+      '@ezuikit/utils-collect':
+        specifier: ^0.1.1
+        version: 0.1.1
+      '@ezuikit/utils-i18n':
+        specifier: 2.0.1
+        version: 2.0.1
+      '@ezuikit/utils-logger':
+        specifier: 2.1.0
+        version: 2.1.0
+      '@ezuikit/utils-tools':
+        specifier: ^2.0.11
+        version: 2.0.11
+      '@skax/hls-parse':
+        specifier: 0.0.1-beta.9
+        version: 0.0.1-beta.9
+      deepmerge:
+        specifier: ^4.3.1
+        version: 4.3.1
+      eventemitter3:
+        specifier: ^5.0.1
+        version: 5.0.4
+      hls.js:
+        specifier: ^1.6.16
+        version: 1.7.4
+      ua-parser-js:
+        specifier: 1.0.37
+        version: 1.0.37
 
 packages:
 
-  /@ezuikit/control-date-picker@2.0.0-beta.4:
-    resolution: {integrity: sha512-0+uN3s8W78uSZSvWXbmFUY5kmK8I/94uWqBm9cSRlG7OtSvLCrySVXj/fbYXMrDWpXx6okHfxPZRqke6GbpK9Q==}
+  '@ezuikit/control-broadcast@1.0.0-beta.5':
+    resolution: {integrity: sha512-EcwCjHPXHOVQaovJ4x3gNpPIOBXoQ3V6D9A0oAS2TVmAhd2dVFxabcwNfbu0SReka6f21pUreLaxQmSSK8cNqQ==}
+
+  '@ezuikit/control-core@0.0.1-beta.2':
+    resolution: {integrity: sha512-6TlZJj6KuVmGR7s6dnty2E1ozskwTqMHlBebOY5MzQUmXaBrhoPvWsqZ3vzxbGf33LOIs2ij9bDR3dZZimLkLQ==}
+
+  '@ezuikit/control-date-picker@2.1.2-beta.1':
+    resolution: {integrity: sha512-IGbJ0J+SifQSOMdCjnTQMJZWlD+qEqQHgWYtCWUtGP82q6pOwMGbSBE6PU1OneU7mjy9PyuvUE8Y17ylof5cFg==}
+
+  '@ezuikit/control-drawer@0.0.3':
+    resolution: {integrity: sha512-8LyqqEkoVXOCwD6kNGDS8u5h4KMGRzmR+L75+NqMZpt71RwCKW4bgzdCoGhmkDQ85ub6Kh7TaVIOZMEgiGpXCQ==}
+
+  '@ezuikit/control-message@0.0.2':
+    resolution: {integrity: sha512-flBD10WN3sT3X/RZIfOapx3O+pKvuqEZame0gFWJNERPW3DFrQI6r0LNnLCsG91FOghBRQGMe378Uhsjb+VYHg==}
+
+  '@ezuikit/control-modal@0.0.2':
+    resolution: {integrity: sha512-Etd2RA/iKtkhsAIXtt/sifVPsIY9Xqhe0M9LGgC0s5/DApH4/GtetZQMkCwBgk8K3nLssN0dtzObRuUaxv9+Jw==}
+
+  '@ezuikit/control-ptz@2.0.0-beta.4':
+    resolution: {integrity: sha512-xneBBKXyXWA9nNThXBf6c/Iwz8mLKYeEXlctitYpKflP8f2b0YCvRZtYR8xawZTx1R4EG0Z8KpmQG3Cod0jqpA==}
+
+  '@ezuikit/control-rec-list-modal@0.0.2':
+    resolution: {integrity: sha512-ux2WHDUv8SJiZ7KBCGfVQxsBYA3Lu8VFRaT0VFVx0TqtsRc8G6qZKbRM6IXVrAnl5ptirAC6QvT0+Fs/45Kb3g==}
+
+  '@ezuikit/control-segment-progress@0.0.1':
+    resolution: {integrity: sha512-po+tJxVJlFbI2TnPzLyt4GL3KZc/X0nFsJ9Fn8HCpI0R2AiMtwx5ZBADV17xa13A82/Us3rl1R0ijVj1pRvn0g==}
+
+  '@ezuikit/control-time-line@2.1.0':
+    resolution: {integrity: sha512-hUk9VF+R4tozbJ5O8yFEhSTI1iHLyild+Uli+E7uag0LIfaSYSNY1dqps4TiXWwTzet3lfn2mYYq8jZGVd1kKw==}
+
+  '@ezuikit/control-virtual-scroll@0.0.2':
+    resolution: {integrity: sha512-p3Cs273nkULt9Eq7y+jaPQkUhd3kmrQ4DUlLkfqi/igxMjSk0gLtftEzvqBvWGOLNuOeUvlOYDX4XQbhBMUwyA==}
+
+  '@ezuikit/control-zoom@1.0.0-beta.4':
+    resolution: {integrity: sha512-MG+weJeYSeh86LyZWFseUSWw9VCkyKFIE0V58Nee1+NCIuctbTd9fBmtAexX8xHEiApHKDwfQmwc+xlUZgTb6Q==}
+
+  '@ezuikit/player-theme@3.2.0-beta.9':
+    resolution: {integrity: sha512-9OUcatDzd89XWFbuppe62sDpajEaqR3el692PJ/kVSSwnQzsb5+2SWkgS7dy1VMIqr4T7RYCSro2Op9ym/wQCg==}
+
+  '@ezuikit/utils-collect@0.1.1':
+    resolution: {integrity: sha512-BgEOnTtAq8rQRBAKv5rLXbQLGOnfOZ6NS0QTmiviey80JbMJlxrLiqmjL5lxvkm4JtCcXCtSgPA4tskQKN4eDA==}
+
+  '@ezuikit/utils-i18n@2.0.1':
+    resolution: {integrity: sha512-846z2bDpCxioTBO3KG8Uw8QUFa6hzquSzmZKWPO6fjT3P4v6zNnXRz+Z3JCPlXnc4eesi03A+JmMAU6m5KI4gg==}
+
+  '@ezuikit/utils-logger@2.1.0':
+    resolution: {integrity: sha512-Kj/vTddGWhRhOApo/QmesxqEPxkSwhwakQGZx3b3xLI8Dou2NMg8iNA+9aXU4jT5uT13TmdCn0oMC8Kbq6BMGQ==}
+
+  '@ezuikit/utils-tools@2.0.11':
+    resolution: {integrity: sha512-yG3wPfVJw9iEkWArwIXbhJc0OP/lH9z5BM+fmEms+RdLS8KDR5NVnKR2mdsVDuMkPC9ycWe1XmYBTSbgeGJDRA==}
+
+  '@skax/delegate@4.0.2':
+    resolution: {integrity: sha512-8imP+fGESjlbU4mFhZMEuR3/qmYVtqQjXXzZ/C/imbzKqyaMWYpEDqQXNf6yGHzWHUJhZwn5AWNm645U1GjQsQ==}
+
+  '@skax/drag-scroll@1.1.2':
+    resolution: {integrity: sha512-dRYjWY6+ix7FCdDLkkEgitO5EcawaHJt1Fu6BXUwKjpikkGnVeMRzrIwfH3jr6FbrhZvZr4StsYG7x5xMHZ3CQ==}
+
+  '@skax/hls-parse@0.0.1-beta.9':
+    resolution: {integrity: sha512-oJOwqoRqk7nCeQjovvpAYyh5inJqbDNLj+7DDTcRITyLDmCo6FMkFxVL5iracUB+W1GrhXf5jISYtlLjGxPI4w==}
+
+  '@skax/picker@1.1.8':
+    resolution: {integrity: sha512-PY8eefUG2KYheTV4VsToL66JDyFWbNrUQcz4sdEUfdFs5A2JWBYL4tNVEIMUq92m03yXaPtkNXh2RcgKO2Czzg==}
+
+  deepmerge@4.3.1:
+    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
+    engines: {node: '>=0.10.0'}
+
+  eventemitter3@5.0.4:
+    resolution: {integrity: sha512-mlsTRyGaPBjPedk6Bvw+aqbsXDtoAyAzm5MO7JgU+yVRyMQ5O8bD4Kcci7BS85f93veegeCPkL8R4GLClnjLFw==}
+
+  hls.js@1.7.4:
+    resolution: {integrity: sha512-3GlxGdPvT2YHvQYOt+yOzT/DEior/qJVNIylHA77kgeoBTdQQqi70GwefNEUmHQeNGyjC8U62+bruqW/Tpm+tg==}
+
+  screenfull@5.2.0:
+    resolution: {integrity: sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==}
+    engines: {node: '>=0.10.0'}
+
+  ua-parser-js@1.0.37:
+    resolution: {integrity: sha512-bhTyI94tZofjo+Dn8SN6Zv8nBDvyXTymAdM3LDI/0IboIUwTu1rEhW7v2TfiVsoYWgkQ4kOVqnI8APUFbIQIFQ==}
+
+snapshots:
+
+  '@ezuikit/control-broadcast@1.0.0-beta.5':
     dependencies:
-      '@ezuikit/utils-i18n': 2.0.0
-      '@ezuikit/utils-tools': 2.0.3
+      '@ezuikit/control-core': 0.0.1-beta.2
+      '@ezuikit/control-drawer': 0.0.3
+      '@ezuikit/control-message': 0.0.2
+
+  '@ezuikit/control-core@0.0.1-beta.2':
+    dependencies:
+      '@ezuikit/utils-i18n': 2.0.1
+      '@ezuikit/utils-logger': 2.1.0
+      deepmerge: 4.3.1
+
+  '@ezuikit/control-date-picker@2.1.2-beta.1':
+    dependencies:
+      '@ezuikit/utils-i18n': 2.0.1
+      '@ezuikit/utils-tools': 2.0.11
       '@skax/delegate': 4.0.2
       '@skax/picker': 1.1.8
       deepmerge: 4.3.1
-    dev: false
 
-  /@ezuikit/control-ptz@1.0.0-beta.5:
-    resolution: {integrity: sha512-tiV/7EqkaYDtVXx+9kS6VTfI9+jzTwlIOKh1gLbAETv0Y5J/u4C5ItLss9XSxgp/EF6OnHCu2zpuN/FLxnwfrQ==}
+  '@ezuikit/control-drawer@0.0.3': {}
+
+  '@ezuikit/control-message@0.0.2': {}
+
+  '@ezuikit/control-modal@0.0.2':
     dependencies:
-      '@ezuikit/utils-tools': 2.0.3
+      '@ezuikit/utils-i18n': 2.0.1
       deepmerge: 4.3.1
-    dev: false
+      eventemitter3: 5.0.4
 
-  /@ezuikit/control-time-line@2.0.0-beta.4:
-    resolution: {integrity: sha512-BwNQo8Kq/qQ3xtEnM6ya0JXstixUORNcUrXS+QTxPyU6+PxTs/YlurgE4uLb0kYuH6ny6ErxaumHVn3sqFq8zw==}
+  '@ezuikit/control-ptz@2.0.0-beta.4':
     dependencies:
-      '@ezuikit/utils-i18n': 2.0.0
-      '@ezuikit/utils-tools': 2.0.3
+      '@ezuikit/utils-logger': 2.1.0
+      deepmerge: 4.3.1
+
+  '@ezuikit/control-rec-list-modal@0.0.2':
+    dependencies:
+      '@ezuikit/control-modal': 0.0.2
+      '@ezuikit/control-virtual-scroll': 0.0.2
+      '@ezuikit/utils-i18n': 2.0.1
+      '@ezuikit/utils-tools': 2.0.11
+      deepmerge: 4.3.1
+
+  '@ezuikit/control-segment-progress@0.0.1': {}
+
+  '@ezuikit/control-time-line@2.1.0':
+    dependencies:
+      '@ezuikit/utils-i18n': 2.0.1
+      '@ezuikit/utils-tools': 2.0.11
       '@skax/delegate': 4.0.2
       '@skax/drag-scroll': 1.1.2
       '@skax/picker': 1.1.8
       deepmerge: 4.3.1
-    dev: false
 
-  /@ezuikit/control-zoom@1.0.0-beta.4:
-    resolution: {integrity: sha512-MG+weJeYSeh86LyZWFseUSWw9VCkyKFIE0V58Nee1+NCIuctbTd9fBmtAexX8xHEiApHKDwfQmwc+xlUZgTb6Q==}
-    dev: false
-
-  /@ezuikit/player-theme@3.0.2-beta.3:
-    resolution: {integrity: sha512-cp/nMQzu3QDkNrmuFM72ftBGvinuvzDotPMR35igGAyDa/Mnm0mp+PErxxPK1jjI3ffyzzrFfdFX09rrIK1fTQ==}
+  '@ezuikit/control-virtual-scroll@0.0.2':
     dependencies:
-      '@ezuikit/control-date-picker': 2.0.0-beta.4
-      '@ezuikit/control-ptz': 1.0.0-beta.5
-      '@ezuikit/control-time-line': 2.0.0-beta.4
+      deepmerge: 4.3.1
+      eventemitter3: 5.0.4
+
+  '@ezuikit/control-zoom@1.0.0-beta.4': {}
+
+  '@ezuikit/player-theme@3.2.0-beta.9':
+    dependencies:
+      '@ezuikit/control-broadcast': 1.0.0-beta.5
+      '@ezuikit/control-date-picker': 2.1.2-beta.1
+      '@ezuikit/control-ptz': 2.0.0-beta.4
+      '@ezuikit/control-rec-list-modal': 0.0.2
+      '@ezuikit/control-segment-progress': 0.0.1
+      '@ezuikit/control-time-line': 2.1.0
       '@ezuikit/control-zoom': 1.0.0-beta.4
       '@ezuikit/utils-i18n': 2.0.1
-      '@ezuikit/utils-logger': 2.0.1
-      '@ezuikit/utils-tools': 2.0.3
-      '@juggle/resize-observer': 3.4.0
+      '@ezuikit/utils-logger': 2.1.0
+      '@ezuikit/utils-tools': 2.0.11
       '@skax/delegate': 4.0.2
       '@skax/picker': 1.1.8
       deepmerge: 4.3.1
-      eventemitter3: 5.0.1
+      eventemitter3: 5.0.4
       screenfull: 5.2.0
-    dev: false
 
-  /@ezuikit/utils-collect@0.1.1:
-    resolution: {integrity: sha512-BgEOnTtAq8rQRBAKv5rLXbQLGOnfOZ6NS0QTmiviey80JbMJlxrLiqmjL5lxvkm4JtCcXCtSgPA4tskQKN4eDA==}
-    dev: false
+  '@ezuikit/utils-collect@0.1.1': {}
 
-  /@ezuikit/utils-i18n@2.0.0:
-    resolution: {integrity: sha512-gMkfdwFTRk3bAkUVWRGPyEsQl4aIImBpQp732aSSHA75LFPi1MmdaB2Xf34OeC+4v+Anpbt75vviCpUrKPMKlQ==}
+  '@ezuikit/utils-i18n@2.0.1':
     dependencies:
       deepmerge: 4.3.1
-    dev: false
 
-  /@ezuikit/utils-i18n@2.0.1:
-    resolution: {integrity: sha512-846z2bDpCxioTBO3KG8Uw8QUFa6hzquSzmZKWPO6fjT3P4v6zNnXRz+Z3JCPlXnc4eesi03A+JmMAU6m5KI4gg==}
-    dependencies:
-      deepmerge: 4.3.1
-    dev: false
+  '@ezuikit/utils-logger@2.1.0': {}
 
-  /@ezuikit/utils-logger@2.0.1:
-    resolution: {integrity: sha512-AeLLR9ZQJkSJFfCicpkVBcnOE4zyQMp4W4997sTEGyF3k3I8Upkfn4Cye2A44MIphdw6eytKlaJp6H4joSafQw==}
-    dev: false
+  '@ezuikit/utils-tools@2.0.11': {}
 
-  /@ezuikit/utils-tools@2.0.3:
-    resolution: {integrity: sha512-YvUGDU1ikjSc5YjQLh6kQWGBOpqkOczb3HiocWm7FOk9grW6IAGd3RbRu0e+XyWT20nefcEpbIhRwOYsTejjnA==}
-    dev: false
+  '@skax/delegate@4.0.2': {}
 
-  /@ezuikit/utils-tools@2.0.5:
-    resolution: {integrity: sha512-7SR3kKQdColQ+Rz/PPaLzHi8Yv3RuhFUh3iMymonlO95OJSZBgjaTSX5QNeTnZIi57soNVoHByR4tS/JbMA4Wg==}
-    dev: false
+  '@skax/drag-scroll@1.1.2': {}
 
-  /@juggle/resize-observer@3.4.0:
-    resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
-    dev: false
+  '@skax/hls-parse@0.0.1-beta.9': {}
 
-  /@skax/delegate@4.0.2:
-    resolution: {integrity: sha512-8imP+fGESjlbU4mFhZMEuR3/qmYVtqQjXXzZ/C/imbzKqyaMWYpEDqQXNf6yGHzWHUJhZwn5AWNm645U1GjQsQ==}
-    dev: false
+  '@skax/picker@1.1.8': {}
 
-  /@skax/drag-scroll@1.1.2:
-    resolution: {integrity: sha512-dRYjWY6+ix7FCdDLkkEgitO5EcawaHJt1Fu6BXUwKjpikkGnVeMRzrIwfH3jr6FbrhZvZr4StsYG7x5xMHZ3CQ==}
-    dev: false
+  deepmerge@4.3.1: {}
 
-  /@skax/hls-parse@0.0.1-beta.9:
-    resolution: {integrity: sha512-oJOwqoRqk7nCeQjovvpAYyh5inJqbDNLj+7DDTcRITyLDmCo6FMkFxVL5iracUB+W1GrhXf5jISYtlLjGxPI4w==}
-    dev: false
+  eventemitter3@5.0.4: {}
 
-  /@skax/picker@1.1.8:
-    resolution: {integrity: sha512-PY8eefUG2KYheTV4VsToL66JDyFWbNrUQcz4sdEUfdFs5A2JWBYL4tNVEIMUq92m03yXaPtkNXh2RcgKO2Czzg==}
-    dev: false
+  hls.js@1.7.4: {}
 
-  /deepmerge@4.3.1:
-    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
-    engines: {node: '>=0.10.0'}
-    dev: false
+  screenfull@5.2.0: {}
 
-  /eventemitter3@5.0.1:
-    resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
-    dev: false
-
-  /hls.js@1.6.16:
-    resolution: {integrity: sha512-VSIRpLfRwlAAdGL4wiTucx2ScRipo0ed1FBatWkyt832jC4CReKstga6yIhYVwGu9LOBjuX9wzmRMeQdBJtzEA==}
-    dev: false
-
-  /screenfull@5.2.0:
-    resolution: {integrity: sha512-9BakfsO2aUQN2K9Fdbj87RJIEZ82Q9IGim7FqM5OsebfoFC6ZHXgDq/KvniuLTPdeM8wY2o6Dj3WQ7KeQCj3cA==}
-    engines: {node: '>=0.10.0'}
-    dev: false
-
-  /ua-parser-js@1.0.37:
-    resolution: {integrity: sha512-bhTyI94tZofjo+Dn8SN6Zv8nBDvyXTymAdM3LDI/0IboIUwTu1rEhW7v2TfiVsoYWgkQ4kOVqnI8APUFbIQIFQ==}
-    dev: false
+  ua-parser-js@1.0.37: {}

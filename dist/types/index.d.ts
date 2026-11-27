@@ -106,7 +106,8 @@ declare const SCREENSHOT_TYPE: {
  * - 通过 {@link createPlayer} 创建并持有底层引擎（软解 / 硬解），自身只面向
  *   {@link IEnginePlayer} 编程，对解码实现无感。
  * - 负责 `"auto"` 解码的自动降级：先硬解，监听到 `MEDIA_ERROR` 后切换软解（见 {@link _createPlayer}）。
- * - 处理萤石开放平台特性：强制追加 `&vc=3`、LL-HLS 回放地址获取（{@link EzvizFetcher}）。
+ * - 处理萤石开放平台特性：强制追加 `&vc=3`、LL-HLS 回放地址获取、回放地址获取设备能力集
+ *   （均复用 Theme 的 services：`getAddressService` / `getDeviceCapacityService`）。
  * - 打点采集（{@link Collect}）与对外 API（play/pause/seek/screenshot/destroy 等）。
  *
  * @example
@@ -164,15 +165,19 @@ declare class HLSPlayer extends Theme {
         audioCodecUnsupported: "audioCodecUnsupported";
         changeTheme: "changeTheme";
         recTypeChange: "recTypeChange";
+        playTypeChange: "playTypeChange";
         definitionChange: "definitionChange";
         speedChange: "speedChange";
+        streamTypeChange: "streamTypeChange";
+        supportLocalRecordStreamType: "supportLocalRecordStreamType";
         recordingChange: "recordingChange";
         talkingChange: "talkingChange";
         talkVolumeChange: "talkVolumeChange";
-        broadcastChange: "broadcastChange";
+        broadcastPanelChange: "broadcastPanelChange";
         aichatChange: "aichatChange";
         liveChange: "liveChange";
         recDropdownChange: "recDropdownChange";
+        recListChange: "recListChange";
         alarmMessageChange: "alarmMessageChange";
         setLoggerOptions: "setLoggerOptions";
         records: "records";
@@ -182,6 +187,7 @@ declare class HLSPlayer extends Theme {
         currentVideoLevelAuto: "currentVideoLevelAuto";
         setAllDayRecTimes: "setAllDayRecTimes";
         getOSDTime: "getOSDTime";
+        playbackEnd: "playbackEnd";
         control: {
             readonly play: "Control.play";
             readonly playDestroy: "Control.playDestroy";
@@ -206,6 +212,9 @@ declare class HLSPlayer extends Theme {
             readonly speedChange: "Control.speedChange";
             readonly speedPanelOpenChange: "Control.speedPanelOpenChange";
             readonly speedDestroy: "Control.speedDestroy";
+            readonly streamTypeChange: "Control.streamTypeChange";
+            readonly streamTypePanelOpenChange: "Control.streamTypePanelOpenChange";
+            readonly streamTypeDestroy: "Control.streamTypeDestroy";
             readonly ptzPanelOpenChange: "Control.ptzPanelOpenChange";
             readonly ptzSpeedChange: "Control.ptzSpeedChange";
             readonly ptzError: "Control.ptzError";
@@ -215,14 +224,23 @@ declare class HLSPlayer extends Theme {
             readonly talkingChange: "Control.talkingChange";
             readonly talkError: "Control.talkError";
             readonly talkDestroy: "Control.talkDestroy";
-            readonly broadcastChange: "Control.broadcastChange";
+            readonly broadcastPanelChange: "Control.broadcastPanelChange";
             readonly broadcastDestroy: "Control.broadcastDestroy";
+            readonly broadcastVoiceListChange: "Control.broadcastVoiceListChange";
+            readonly broadcastApiResult: "Control.broadcastApiResult";
+            readonly broadcastVoiceRecorded: "Control.broadcastVoiceRecorded";
+            readonly broadcastRecordStart: "Control.broadcastRecordStart";
+            readonly broadcastRecordStop: "Control.broadcastRecordStop";
+            readonly broadcastRecordComplete: "Control.broadcastRecordComplete";
             readonly aichatChange: "Control.aichatChange";
             readonly aichatDestroy: "Control.aichatDestroy";
             readonly liveChange: "Control.liveChange";
             readonly liveDestroy: "Control.liveDestroy";
             readonly recDropdownChange: "Control.recDropdownChange";
             readonly recDropdownDestroy: "Control.recDropdownDestroy";
+            readonly recListChange: "Control.recListChange";
+            readonly recListCardClick: "Control.recListCardClick";
+            readonly recListDestroy: "Control.recListDestroy";
             readonly alarmMessageChange: "Control.alarmMessageChange";
             readonly alarmMessageDestroy: "Control.alarmMessageDestroy";
             readonly zoomChange: "Control.zoomChange";
@@ -233,10 +251,15 @@ declare class HLSPlayer extends Theme {
             readonly datePanelOpenChange: "Control.datePanelOpenChange";
             readonly dateChange: "Control.dateChange";
             readonly dateMonthChange: "Control.dateMonthChange";
-            readonly dateDestroy: "Control.datePanelDestroy";
+            readonly datePanelMonthChange: "Control.datePanelMonthChange";
+            readonly datePanelYearChange: "Control.datePanelYearChange";
+            readonly dateDestroy: "Control.dateDestroy";
+            readonly timePanelOpenChange: "Control.timePanelOpenChange";
+            readonly timeChange: "Control.timeChange";
             readonly timeLineChange: "Control.timeLineChange";
             readonly timeLinePanelOpenChange: "Control.timeLinePanelOpenChange";
             readonly timeLineDestroy: "Control.timeLineDestroy";
+            readonly unsupportedPlayType: "Control.unsupportedPlayType";
             readonly beforeMountControls: "Control.beforeMountControls";
             readonly mountedControls: "Control.mountedControls";
             readonly beforeUnmountControls: "Control.beforeUnmountControls";
@@ -246,6 +269,30 @@ declare class HLSPlayer extends Theme {
             readonly messageDestroy: "Control.messageDestroy";
             readonly contentDestroy: "Control.contentDestroy";
             readonly contentRerender: "Control.contentRerender";
+            readonly playControlInit: "Control.playControlInit";
+            readonly volumeControlInit: "Control.volumeControlInit";
+            readonly deviceControlInit: "Control.deviceControlInit";
+            readonly capturePictureControlInit: "Control.capturePictureControlInit";
+            readonly ptzControlInit: "Control.ptzControlInit";
+            readonly recordControlInit: "Control.recordControlInit";
+            readonly talkControlInit: "Control.talkControlInit";
+            readonly broadcastControlInit: "Control.broadcastControlInit";
+            readonly aiChatControlInit: "Control.aiChatControlInit";
+            readonly liveControlInit: "Control.liveControlInit";
+            readonly recDropdownControlInit: "Control.recDropdownControlInit";
+            readonly recListControlInit: "Control.recListControlInit";
+            readonly alarmMessageControlInit: "Control.alarmMessageControlInit";
+            readonly zoomControlInit: "Control.zoomControlInit";
+            readonly definitionControlInit: "Control.definitionControlInit";
+            readonly fullscreenControlInit: "Control.fullscreenControlInit";
+            readonly globalFullscreenControlInit: "Control.globalFullscreenControlInit";
+            readonly recControlInit: "Control.recControlInit";
+            readonly speedControlInit: "Control.speedControlInit";
+            readonly streamTypeControlInit: "Control.streamTypeControlInit";
+            readonly dateControlInit: "Control.dateControlInit";
+            readonly timeControlInit: "Control.timeControlInit";
+            readonly timeLineControlInit: "Control.timeLineControlInit";
+            readonly segmentProgressControlInit: "Control.segmentProgressControlInit";
         };
         theme: {
             readonly beforeDestroy: "Theme.beforeDestroy";
@@ -254,10 +301,37 @@ declare class HLSPlayer extends Theme {
             readonly recFooterDestroy: "Theme.recFooterDestroy";
         };
         message: "message";
+        http: {
+            readonly getDeviceCapacity: "getDeviceCapacity";
+            readonly getDeviceInfo: "getDeviceInfo";
+            readonly getDeviceSupportQuality: "getDeviceSupportQuality";
+            readonly getEzopenUrl: "getEzopenUrl";
+            readonly queryVoiceList: "queryVoiceList";
+            readonly sendVoiceOnce: "sendVoiceOnce";
+            readonly sendVoice: "sendVoice";
+            readonly postDevicePtzMirror: "postDevicePtzMirror";
+            readonly getRecordMonth: "getRecordMonth";
+            readonly getAppKey: "getAppKey";
+            readonly getDeviceList: "getDeviceList";
+            readonly setVideoLevel: "setVideoLevel";
+            readonly getCloudInfo: "getCloudInfo";
+            readonly getCloudUploadUrl: "getCloudUploadUrl";
+            readonly getStreamAddressList: "getStreamAddressList";
+            readonly getCloudRecordTimes: "getCloudRecordTimes";
+            readonly getCloudTimes: "getCloudTimes";
+            readonly getLocalRecTimes: "getLocalRecTimes";
+            readonly getAlarmList: "getAlarmList";
+            readonly captureSave: "captureSave";
+            readonly createCaptureTask: "createCaptureTask";
+            readonly getSpaceList: "getSpaceList";
+            readonly getAddress: "getAddress";
+            readonly getCDNLiveAddress: "getCDNLiveAddress";
+            readonly getCDNRecordAddress: "getCDNRecordAddress";
+            readonly getStreamInterruptInfo: "getStreamInterruptInfo";
+        };
     };
     /** WebAssembly completed loading identity */
     static __HLS_WASM_DecoderState__: number;
-    url: string;
     playParam: any;
     player: IEnginePlayer;
     onPlayTime: any;
@@ -268,7 +342,6 @@ declare class HLSPlayer extends Theme {
     onPlayFinish: any;
     onError: null;
     audioCodecUnsupported: boolean;
-    private readonly _ezvizFetcher;
     /**
      * 兼容 event 属性：Theme 自身就是 EventEmitter，
      * 子组件（HardHlsPlayer / SoftPlayer / M3U8Parser）通过 options.event 使用
@@ -296,6 +369,14 @@ declare class HLSPlayer extends Theme {
      * player.seek("20260610010000") // 萤石 ll-hls 回放
      */
     seek(second: number | string): Promise<any>;
+    getAddressService(params: any): ReturnType<Theme["getAddressService"]>;
+    /**
+     * @description 切换本地存储的主子码流，仅对萤石设备本地存储生效
+     * @param {1 | 2} streamType 主子码流
+     * @since 2.1.2
+     * @returns {Promise<number>}  0 成功（不代表取流成功）， 1 失败
+     */
+    switchLocalStreamType(streamType: 0 | 1): Promise<number | false | undefined>;
     /**
      * 销毁实例和dom
      */

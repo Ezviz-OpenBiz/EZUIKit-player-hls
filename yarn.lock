@@ -2,55 +2,118 @@
 # yarn lockfile v1
 
 
-"@ezuikit/control-date-picker@^2.0.0-beta.4":
-  version "2.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@ezuikit/control-date-picker/-/control-date-picker-2.0.0-beta.4.tgz#e56d149943a46c056403c29a4f2ca129f9e23a15"
-  integrity sha512-0+uN3s8W78uSZSvWXbmFUY5kmK8I/94uWqBm9cSRlG7OtSvLCrySVXj/fbYXMrDWpXx6okHfxPZRqke6GbpK9Q==
+"@ezuikit/control-broadcast@1.0.0-beta.5":
+  version "1.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-broadcast/-/control-broadcast-1.0.0-beta.5.tgz#a8e9f565021eadb256a4e0ac1322b3f9fcc48cdf"
+  integrity sha512-EcwCjHPXHOVQaovJ4x3gNpPIOBXoQ3V6D9A0oAS2TVmAhd2dVFxabcwNfbu0SReka6f21pUreLaxQmSSK8cNqQ==
   dependencies:
-    "@ezuikit/utils-i18n" "2.0.0"
-    "@ezuikit/utils-tools" "2.0.3"
+    "@ezuikit/control-core" "0.0.1-beta.2"
+    "@ezuikit/control-drawer" "0.0.3"
+    "@ezuikit/control-message" "0.0.2"
+
+"@ezuikit/control-core@0.0.1-beta.2":
+  version "0.0.1-beta.2"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-core/-/control-core-0.0.1-beta.2.tgz#fffbdafdcab6f344e42902bb2f3dfc347f16b1d1"
+  integrity sha512-6TlZJj6KuVmGR7s6dnty2E1ozskwTqMHlBebOY5MzQUmXaBrhoPvWsqZ3vzxbGf33LOIs2ij9bDR3dZZimLkLQ==
+  dependencies:
+    "@ezuikit/utils-i18n" "^2.0.1"
+    "@ezuikit/utils-logger" "2.1.0"
+    deepmerge "^4.3.1"
+
+"@ezuikit/control-date-picker@2.1.2-beta.1":
+  version "2.1.2-beta.1"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-date-picker/-/control-date-picker-2.1.2-beta.1.tgz#160e494f674b7e74b98f531ed0b3e9220651db38"
+  integrity sha512-IGbJ0J+SifQSOMdCjnTQMJZWlD+qEqQHgWYtCWUtGP82q6pOwMGbSBE6PU1OneU7mjy9PyuvUE8Y17ylof5cFg==
+  dependencies:
+    "@ezuikit/utils-i18n" "^2.0.1"
+    "@ezuikit/utils-tools" "^2.0.6"
     "@skax/delegate" "4.0.2"
     "@skax/picker" "1.1.8"
     deepmerge "^4.3.1"
 
-"@ezuikit/control-ptz@^1.0.0-beta.5":
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@ezuikit/control-ptz/-/control-ptz-1.0.0-beta.5.tgz#7f478d7e7e172641cbafa84a38bc79de535ef030"
-  integrity sha512-tiV/7EqkaYDtVXx+9kS6VTfI9+jzTwlIOKh1gLbAETv0Y5J/u4C5ItLss9XSxgp/EF6OnHCu2zpuN/FLxnwfrQ==
+"@ezuikit/control-drawer@0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-drawer/-/control-drawer-0.0.3.tgz#b7e156acb4ac65703a5b35e50f24b19a40cdd67e"
+  integrity sha512-8LyqqEkoVXOCwD6kNGDS8u5h4KMGRzmR+L75+NqMZpt71RwCKW4bgzdCoGhmkDQ85ub6Kh7TaVIOZMEgiGpXCQ==
+
+"@ezuikit/control-message@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-message/-/control-message-0.0.2.tgz#5cba3eca4643a129e813a27463762247399b725a"
+  integrity sha512-flBD10WN3sT3X/RZIfOapx3O+pKvuqEZame0gFWJNERPW3DFrQI6r0LNnLCsG91FOghBRQGMe378Uhsjb+VYHg==
+
+"@ezuikit/control-modal@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-modal/-/control-modal-0.0.2.tgz#5d46d0175dfcd5097f83b1e8f755e8874eb9bfc0"
+  integrity sha512-Etd2RA/iKtkhsAIXtt/sifVPsIY9Xqhe0M9LGgC0s5/DApH4/GtetZQMkCwBgk8K3nLssN0dtzObRuUaxv9+Jw==
   dependencies:
-    "@ezuikit/utils-tools" "2.0.3"
+    "@ezuikit/utils-i18n" "^2.0.1"
+    deepmerge "^4.3.1"
+    eventemitter3 "^5.0.1"
+
+"@ezuikit/control-ptz@2.0.0-beta.4":
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-ptz/-/control-ptz-2.0.0-beta.4.tgz#6d6d58c429c36a8b5a551599d6cd7e0c9a341f98"
+  integrity sha512-xneBBKXyXWA9nNThXBf6c/Iwz8mLKYeEXlctitYpKflP8f2b0YCvRZtYR8xawZTx1R4EG0Z8KpmQG3Cod0jqpA==
+  dependencies:
+    "@ezuikit/utils-logger" "2.1.0"
     deepmerge "^4.3.1"
 
-"@ezuikit/control-time-line@^2.0.0-beta.4":
-  version "2.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@ezuikit/control-time-line/-/control-time-line-2.0.0-beta.4.tgz#bb0efb5145e2e2148add782614a5e2db76cc3c44"
-  integrity sha512-BwNQo8Kq/qQ3xtEnM6ya0JXstixUORNcUrXS+QTxPyU6+PxTs/YlurgE4uLb0kYuH6ny6ErxaumHVn3sqFq8zw==
+"@ezuikit/control-rec-list-modal@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-rec-list-modal/-/control-rec-list-modal-0.0.2.tgz#ee8b8c9a1ce46c0cb4f3452dd652bc2b00df9791"
+  integrity sha512-ux2WHDUv8SJiZ7KBCGfVQxsBYA3Lu8VFRaT0VFVx0TqtsRc8G6qZKbRM6IXVrAnl5ptirAC6QvT0+Fs/45Kb3g==
   dependencies:
-    "@ezuikit/utils-i18n" "2.0.0"
-    "@ezuikit/utils-tools" "2.0.3"
+    "@ezuikit/control-modal" "0.0.2"
+    "@ezuikit/control-virtual-scroll" "0.0.2"
+    "@ezuikit/utils-i18n" "^2.0.1"
+    "@ezuikit/utils-tools" "^2.0.6"
+    deepmerge "^4.3.1"
+
+"@ezuikit/control-segment-progress@0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-segment-progress/-/control-segment-progress-0.0.1.tgz#ddc48ec7723b2fccaec231cda45a74346b3110f3"
+  integrity sha512-po+tJxVJlFbI2TnPzLyt4GL3KZc/X0nFsJ9Fn8HCpI0R2AiMtwx5ZBADV17xa13A82/Us3rl1R0ijVj1pRvn0g==
+
+"@ezuikit/control-time-line@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-time-line/-/control-time-line-2.1.0.tgz#7c8cd109a9b23399f6a4e6231b389694557e27a5"
+  integrity sha512-hUk9VF+R4tozbJ5O8yFEhSTI1iHLyild+Uli+E7uag0LIfaSYSNY1dqps4TiXWwTzet3lfn2mYYq8jZGVd1kKw==
+  dependencies:
+    "@ezuikit/utils-i18n" "^2.0.1"
+    "@ezuikit/utils-tools" "^2.0.6"
     "@skax/delegate" "4.0.2"
     "@skax/drag-scroll" "1.1.2"
     "@skax/picker" "1.1.8"
     deepmerge "^4.3.1"
 
-"@ezuikit/control-zoom@^1.0.0-beta.3":
+"@ezuikit/control-virtual-scroll@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@ezuikit/control-virtual-scroll/-/control-virtual-scroll-0.0.2.tgz#3903d730d4bad026bcf82035b11e795ead4aa3ca"
+  integrity sha512-p3Cs273nkULt9Eq7y+jaPQkUhd3kmrQ4DUlLkfqi/igxMjSk0gLtftEzvqBvWGOLNuOeUvlOYDX4XQbhBMUwyA==
+  dependencies:
+    deepmerge "^4.3.1"
+    eventemitter3 "^5.0.1"
+
+"@ezuikit/control-zoom@1.0.0-beta.4":
   version "1.0.0-beta.4"
   resolved "https://registry.yarnpkg.com/@ezuikit/control-zoom/-/control-zoom-1.0.0-beta.4.tgz#a3ff1fd43e1a1bb23103a4c263c026348119c423"
   integrity sha512-MG+weJeYSeh86LyZWFseUSWw9VCkyKFIE0V58Nee1+NCIuctbTd9fBmtAexX8xHEiApHKDwfQmwc+xlUZgTb6Q==
 
-"@ezuikit/player-theme@3.0.2-beta.3":
-  version "3.0.2-beta.3"
-  resolved "https://registry.yarnpkg.com/@ezuikit/player-theme/-/player-theme-3.0.2-beta.3.tgz#b42bdca6ec7a964780e3ba8a142f5fb3f5407dc1"
-  integrity sha512-cp/nMQzu3QDkNrmuFM72ftBGvinuvzDotPMR35igGAyDa/Mnm0mp+PErxxPK1jjI3ffyzzrFfdFX09rrIK1fTQ==
+"@ezuikit/player-theme@3.2.0-beta.9":
+  version "3.2.0-beta.9"
+  resolved "https://registry.yarnpkg.com/@ezuikit/player-theme/-/player-theme-3.2.0-beta.9.tgz#89dc54934f07bd4475a28364ecd06984a156782d"
+  integrity sha512-9OUcatDzd89XWFbuppe62sDpajEaqR3el692PJ/kVSSwnQzsb5+2SWkgS7dy1VMIqr4T7RYCSro2Op9ym/wQCg==
   dependencies:
-    "@ezuikit/control-date-picker" "^2.0.0-beta.4"
-    "@ezuikit/control-ptz" "^1.0.0-beta.5"
-    "@ezuikit/control-time-line" "^2.0.0-beta.4"
-    "@ezuikit/control-zoom" "^1.0.0-beta.3"
-    "@ezuikit/utils-i18n" "2.0.1"
-    "@ezuikit/utils-logger" "2.0.1"
-    "@ezuikit/utils-tools" "2.0.3"
-    "@juggle/resize-observer" "^3.4.0"
+    "@ezuikit/control-broadcast" "1.0.0-beta.5"
+    "@ezuikit/control-date-picker" "2.1.2-beta.1"
+    "@ezuikit/control-ptz" "2.0.0-beta.4"
+    "@ezuikit/control-rec-list-modal" "0.0.2"
+    "@ezuikit/control-segment-progress" "0.0.1"
+    "@ezuikit/control-time-line" "2.1.0"
+    "@ezuikit/control-zoom" "1.0.0-beta.4"
+    "@ezuikit/utils-i18n" "^2.0.1"
+    "@ezuikit/utils-logger" "^2.1.0"
+    "@ezuikit/utils-tools" "^2.0.11"
     "@skax/delegate" "4.0.2"
     "@skax/picker" "1.1.8"
     deepmerge "^4.3.1"
@@ -62,39 +125,22 @@
   resolved "https://registry.yarnpkg.com/@ezuikit/utils-collect/-/utils-collect-0.1.1.tgz#b9b49b1a2ef762c1d33b8a154bdd571e9cd965da"
   integrity sha512-BgEOnTtAq8rQRBAKv5rLXbQLGOnfOZ6NS0QTmiviey80JbMJlxrLiqmjL5lxvkm4JtCcXCtSgPA4tskQKN4eDA==
 
-"@ezuikit/utils-i18n@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@ezuikit/utils-i18n/-/utils-i18n-2.0.0.tgz#41dceba7b09043e1a5baffce36ca0e0de36c7cc4"
-  integrity sha512-gMkfdwFTRk3bAkUVWRGPyEsQl4aIImBpQp732aSSHA75LFPi1MmdaB2Xf34OeC+4v+Anpbt75vviCpUrKPMKlQ==
-  dependencies:
-    deepmerge "^4.3.1"
-
-"@ezuikit/utils-i18n@2.0.1":
+"@ezuikit/utils-i18n@2.0.1", "@ezuikit/utils-i18n@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@ezuikit/utils-i18n/-/utils-i18n-2.0.1.tgz#e4a5d0b921763ab5554cedc02fb8e058f4640802"
   integrity sha512-846z2bDpCxioTBO3KG8Uw8QUFa6hzquSzmZKWPO6fjT3P4v6zNnXRz+Z3JCPlXnc4eesi03A+JmMAU6m5KI4gg==
   dependencies:
     deepmerge "^4.3.1"
 
-"@ezuikit/utils-logger@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@ezuikit/utils-logger/-/utils-logger-2.0.1.tgz#5493ec1e388a55b14e557581cb382edcae71cfdc"
-  integrity sha512-AeLLR9ZQJkSJFfCicpkVBcnOE4zyQMp4W4997sTEGyF3k3I8Upkfn4Cye2A44MIphdw6eytKlaJp6H4joSafQw==
+"@ezuikit/utils-logger@2.1.0", "@ezuikit/utils-logger@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@ezuikit/utils-logger/-/utils-logger-2.1.0.tgz#d65b0277cc35a4e7f2596e7d135e5a4fd653dc3f"
+  integrity sha512-Kj/vTddGWhRhOApo/QmesxqEPxkSwhwakQGZx3b3xLI8Dou2NMg8iNA+9aXU4jT5uT13TmdCn0oMC8Kbq6BMGQ==
 
-"@ezuikit/utils-tools@2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@ezuikit/utils-tools/-/utils-tools-2.0.3.tgz#11fdf9422288f1355c2378b9d890844168fca6b3"
-  integrity sha512-YvUGDU1ikjSc5YjQLh6kQWGBOpqkOczb3HiocWm7FOk9grW6IAGd3RbRu0e+XyWT20nefcEpbIhRwOYsTejjnA==
-
-"@ezuikit/utils-tools@2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@ezuikit/utils-tools/-/utils-tools-2.0.5.tgz#81edb936af448d52e61aa7425d7faa4ec1100bd0"
-  integrity sha512-7SR3kKQdColQ+Rz/PPaLzHi8Yv3RuhFUh3iMymonlO95OJSZBgjaTSX5QNeTnZIi57soNVoHByR4tS/JbMA4Wg==
-
-"@juggle/resize-observer@^3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.4.0.tgz#08d6c5e20cf7e4cc02fd181c4b0c225cd31dbb60"
-  integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
+"@ezuikit/utils-tools@^2.0.11", "@ezuikit/utils-tools@^2.0.6":
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@ezuikit/utils-tools/-/utils-tools-2.0.11.tgz#331e411d69219d63ae9ed7044cfdca70787a3ee7"
+  integrity sha512-yG3wPfVJw9iEkWArwIXbhJc0OP/lH9z5BM+fmEms+RdLS8KDR5NVnKR2mdsVDuMkPC9ycWe1XmYBTSbgeGJDRA==
 
 "@skax/delegate@4.0.2":
   version "4.0.2"
